@@ -77,7 +77,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <body className="landing-page no-skin-config" />
+    </Helmet>
   )
 }
 

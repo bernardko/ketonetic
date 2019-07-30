@@ -1,9 +1,9 @@
 module.exports = {
-  pathPrefix: "/gatsby-react-bootstrap-starter",
+  pathPrefix: "/ketobolic",
   siteMetadata: {
-    title: `Gatsby React Bootstrap Starter`,
-    description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
-    author: `Billy Jacoby`,
+    title: `Ketobolic`,
+    description: `A goal oriented approach to the ketogenic diet.`,
+    author: `Bernard Ko`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/img`,
       },
     },
     `gatsby-plugin-sass`,
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-react-bootstrap`,
-        short_name: `react-bootstrap`,
+        name: `Ketobolic`,
+        short_name: `Ketobolic`,
         start_url: `/`,
         background_color: `#20232a`,
         theme_color: `#20232a`,

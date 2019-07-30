@@ -3,6 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-
-// You can delete this file if you're not using it
-import "./src/styles/style.scss"
+import "./src/styles/bootstrap.min.css"
+import "./src/font-awesome/css/font-awesome.css"
+import "./src/styles/animate.css"
+import "./src/styles/inspinia.css"
+import "./src/styles/tiamat.css"

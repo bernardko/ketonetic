@@ -2,11 +2,11 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const TaggedH2Block = ({title}) => (
+const TaggedH2Block = ({blockData}) => (
     <div class="row">
         <div class="col-lg-12 wow fadeInLeft">
-            <div class="navy-line-left"></div>
-            <h2 class="line">Perfectly designed </h2>
+            <small>{blockData.tag}</small>
+            <h2 class="tag">{blockData.title}</h2>
         </div>
     </div>
 )

@@ -1,30 +1,20 @@
 import React from "react"
 
-const FourFeatureRowBlock = () => (
-    <section id="features" class="container services">
+const TextFeatureRowBlock = ({blockData}) => (
+    <section id={blockData.section_id} class={"container"+blockData.section_classes}>
         <div class="row">
-            <div class="col-sm-3">
-                <h2>Full responsive</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-            </div>
-            <div class="col-sm-3">
-                <h2>LESS/SASS Files</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-            </div>
-            <div class="col-sm-3">
-                <h2>6 Charts Library</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-            </div>
-            <div class="col-sm-3">
-                <h2>Advanced Forms</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-            </div>
+            {blockData.paragraphs.map((paragraph, index) => {
+                const gridSize = 12/blockData.paragraphs.length
+                return (
+                    <div class={"col-sm-"+gridSize}>
+                        <h2>{paragraph.title}</h2>
+                        <p>{paragraph.text}</p>
+                        <p><a class="navy-link" href="{paragraph.link_url}" role="button">{paragraph.link_text} &raquo;</a></p>
+                    </div>
+                )
+            })}
         </div>
     </section>
 )
 
-export default FourFeatureRowBlock
+export default TextFeatureRowBlock

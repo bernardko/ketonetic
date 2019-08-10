@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const ArticleItemBlock = () => (
+const ListItemBlock = () => (
     <div className="vote-item">
         <div className="row">
             <div className="col-md-1">
@@ -24,10 +24,10 @@ const ArticleItemBlock = () => (
     </div>
 )
 
-ArticleItemBlock.propTypes = {
+ListItemBlock.propTypes = {
 }
 
-ArticleItemBlock.defaultProps = {
+ListItemBlock.defaultProps = {
 }
 
-export default ArticleItemBlock
+export default ListItemBlock

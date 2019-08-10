@@ -8,11 +8,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
-import { Container, Row, Col } from "react-bootstrap"
-
-import PageHeader from "./pageHeader"
-import Jumbotron from "./jumbotron"
 import Footer from "./footer"
+import Navbar from "./navBar"
 
 const Layout = ({ children, pageInfo }) => (
   <StaticQuery
@@ -27,27 +24,8 @@ const Layout = ({ children, pageInfo }) => (
     `}
     render={data => (
       <>
-      <PageHeader siteTitle={data.site.siteMetadata.title} pageInfo={pageInfo} />
-      {pageInfo.twoCol ? (
-        <section id="columns" className="container">
-          <div className="row">
-            <div className="col-sm-8">            
-              {children}
-            </div>
-            <div className="col-sm-4">
-              <Jumbotron />7
-            </div>
-          </div>
-        </section>
-      ) : (
-        <section id="columns" className="container">
-          <div className="row">
-            <div className="col-sm-12">            
-              {children}
-            </div>
-          </div>
-        </section>
-      )}
+      <Navbar pageInfo={pageInfo} />
+      {children}
       <Footer />
       </>
     )}

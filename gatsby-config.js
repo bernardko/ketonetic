@@ -28,6 +28,15 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "Wagtail",
+        fieldName: 'wagtail',
+        url: process.env.GATSBY_WAGTAIL_ENDPOINT || 'http://localhost:8001/graphql/',
+        // refetchInterval: 10,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -15,7 +15,7 @@ const Columns = ({ children, columnLayout }) => {
     switch (columnLayout) {
         case 1:
         return (
-            <section id="columns" className="container">
+            <section className="container features m-t-lg m-b-lg">
             <div className="row">
                 <div className="col-sm-12">            
                 {children}
@@ -25,7 +25,7 @@ const Columns = ({ children, columnLayout }) => {
         )
         case 2:
         return (
-            <section id="columns" className="container">
+            <section className="container features m-t-lg m-b-lg">
             <div className="row">
                 <div className="col-sm-8">            
                 {children}

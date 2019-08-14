@@ -15,23 +15,23 @@ const ColumnBlock = ({blockData, columnLayout}) => (
             switch (block.type) {
                 case 'tagged_h2':
                     return (
-                        <TaggedH2Block blockData={block} />
+                        <TaggedH2Block blockData={block.value} />
                     )
                 case 'line_h2':
                     return (
-                        <LineH2Block blockData={block} />
+                        <LineH2Block blockData={block.value} />
                     )
                 case 'image':
                     return (
-                        <ImageBlock blockData={block} />
+                        <ImageBlock blockData={block.value} />
                     )
                 case 'rich_text':
                     return (
-                        <RichTextBlock blockData={block} />
+                        <RichTextBlock blockData={block.value} />
                     )
                 case 'action_button':
                     return (
-                        <ActionButtonBlock blockData={block} />
+                        <ActionButtonBlock blockData={block.value} />
                     )
             }
         })}

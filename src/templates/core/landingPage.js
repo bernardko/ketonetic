@@ -1,16 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import FeatureSliderBlock from "../components/landing/featureSliderBlock"
-import HighlightTextBlock from "../components/landing/highlightTextBlock"
-import TextFeatureRowBlock from "../components/landing/textFeatureRowBlock"
-import CenterImageFeatureBlock from "../components/landing/centerImageFeatureBlock"
-import StackedFeatureListBlock from "../components/landing/stackedFeatureListBlock"
-import ColumnBlock from "../components/columns/columnBlock"
-import AuthorBlock from "../components/landing/authorBlock"
-import AuthorQuoteBlock from "../components/landing/authorQuoteBlock"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import FeatureSliderBlock from "../../components/landing/featureSliderBlock"
+import HighlightTextBlock from "../../components/landing/highlightTextBlock"
+import TextFeatureRowBlock from "../../components/landing/textFeatureRowBlock"
+import CenterImageFeatureBlock from "../../components/landing/centerImageFeatureBlock"
+import StackedFeatureListBlock from "../../components/landing/stackedFeatureListBlock"
+import ColumnBlock from "../../components/columns/columnBlock"
+import AuthorBlock from "../../components/landing/authorBlock"
+import AuthorQuoteBlock from "../../components/landing/authorQuoteBlock"
 
 const LandingPage = ({data}) => {
   const page = data.wagtail.landingPages[0]
@@ -41,7 +41,7 @@ const LandingPage = ({data}) => {
             )
           case 'column':
             return (
-              <ColumnBlock blockData={block.value} columnLayout={2} />
+              <ColumnBlock blockData={block.value.content} columnLayout={block.value.columns} />
             )
           case 'highlight_text':
             return (
@@ -78,6 +78,19 @@ export const query = graphql`
             urlPath
             body
         }
+    }
+  }
+`
+export const previewQuery = `
+  query($slug: String, $previewToken: String) {
+    landingPages(slug: $slug, previewToken: $previewToken) {
+        title
+        pageTitle
+        searchDescription
+        slug
+        specificPageType
+        urlPath
+        body
     }
   }
 `

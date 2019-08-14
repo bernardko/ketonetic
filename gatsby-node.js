@@ -26,10 +26,10 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
         
         result.data.wagtail.landingPages.forEach(page => {
+            const appLabel = page.specificPageType.split(".")[0]
             var characterList = page.specificPageType.split(".")[1].split("")
             const firstLetter = characterList.shift().toLowerCase()
-            const pageTemplate = path.resolve("./src/templates/" + firstLetter + characterList.join("") + ".js")
-            console.log(page.urlPath)
+            const pageTemplate = path.resolve("./src/templates/" + appLabel + "/" + firstLetter + characterList.join("") + ".js")
             createPage({
                 // Path for this page — required
                 path: page.urlPath,

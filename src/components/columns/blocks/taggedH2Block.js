@@ -4,7 +4,7 @@ import React from "react"
 
 const TaggedH2Block = ({blockData}) => (
     <div class="row">
-        <div class="col-lg-12 wow fadeInLeft">
+        <div class="col-lg-12 features-text wow fadeInLeft">
             <small>{blockData.tag}</small>
             <h2 class="tag">{blockData.title}</h2>
         </div>

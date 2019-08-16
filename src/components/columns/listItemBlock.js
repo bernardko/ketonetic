@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const ListItemBlock = () => (
+const ListItemBlock = ({page}) => (
     <div className="vote-item">
         <div className="row">
             <div className="col-md-1">
@@ -12,7 +12,7 @@ const ListItemBlock = () => (
             </div>
             <div className="col-md-11">
                 <a href="#" className="vote-title no-vote">
-                    It is a long established fact that a reader will be distracted
+                    {page.title}
                 </a>
                 <div className="vote-info no-vote">
                     <i className="fa fa-comments-o"></i> <a href="#">Comments (32)</a>

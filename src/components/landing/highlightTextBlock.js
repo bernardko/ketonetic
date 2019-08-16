@@ -6,9 +6,9 @@ const HighlightTextBlock = ({blockData}) => (
             <div class="row">
                 <div class="col-lg-12 text-center wow zoomIn">
                     <i class="fa fa-comment big-icon"></i>
-                    <h1>
+                    <h2>
                         {blockData.title}
-                    </h1>
+                    </h2>
                     <div class="testimonials-text">
                         <i>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."</i>
                     </div>

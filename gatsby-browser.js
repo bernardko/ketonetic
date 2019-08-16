@@ -6,5 +6,5 @@
 import "./src/styles/bootstrap.min.css"
 import "./src/font-awesome/css/font-awesome.css"
 import "./src/styles/animate.css"
-import "./src/styles/inspinia.css"
-import "./src/styles/tiamat.css"
+import "./src/styles/base.css"
+import "./src/styles/style.css"

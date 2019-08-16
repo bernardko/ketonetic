@@ -20,12 +20,16 @@ exports.createPages = ({ graphql, actions }) => {
                 specificPageType
                 urlPath
             }
+            categoryPages {
+              slug
+              specificPageType
+              urlPath
+            }
         }
       }
       
     `).then(result => {
-        
-        result.data.wagtail.landingPages.forEach(page => {
+        const processPages = page => {
             const appLabel = page.specificPageType.split(".")[0]
             var characterList = page.specificPageType.split(".")[1].split("")
             const firstLetter = characterList.shift().toLowerCase()
@@ -46,7 +50,10 @@ exports.createPages = ({ graphql, actions }) => {
                   slug: page.slug,
                 },
             })
-        })
+        }
+
+        result.data.wagtail.landingPages.forEach(processPages)
+        result.data.wagtail.categoryPages.forEach(processPages)
     })
 
 }

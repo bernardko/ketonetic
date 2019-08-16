@@ -5,7 +5,7 @@ const StackedFeatureListBlock = ({blockData}) => (
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>{blockData.title}</h1>
+                <h2>{blockData.title}</h2>
                 <p>{blockData.subtitle}</p>
             </div>
         </div>
@@ -16,7 +16,7 @@ const StackedFeatureListBlock = ({blockData}) => (
                         {feature.highlight_tag && (
                             <small>{feature.highlight_tag}</small>
                         )}
-                        <h2>{feature.title}</h2>
+                        <h3>{feature.title}</h3>
                         <p>{feature.text}</p>
                         {feature.link_text && feature.link_url && (
                             <a href={feature.link_url} class="btn btn-primary">{feature.link_text}</a>

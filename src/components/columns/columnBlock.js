@@ -8,6 +8,7 @@ import LineH2Block from "./blocks/lineH2Block"
 import TaggedH2Block from "./blocks/taggedH2Block"
 import RichTextBlock from "./blocks/richTextBlock"
 import Columns from "./columns"
+import H2Block from "./blocks/h2Block"
 
 const ColumnBlock = ({blockData, columnLayout}) => (
     <Columns columnLayout={columnLayout}>
@@ -20,6 +21,10 @@ const ColumnBlock = ({blockData, columnLayout}) => (
                 case 'line_h2':
                     return (
                         <LineH2Block blockData={block.value} />
+                    )
+                case 'h2':
+                    return (
+                        <H2Block blockData={block.value} />
                     )
                 case 'image':
                     return (

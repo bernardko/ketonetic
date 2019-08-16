@@ -1,7 +1,7 @@
 import React from "react"
 
 const AuthorBlock = ({blockData}) => (
-    <section id="team" class="gray-section features team" style={{marginTop:0}}>
+    <section id="team" class="gray-section features team p-h-lg">
         <div class="container">
             <div class="row m-b-lg">
                 <div class="col-lg-12">

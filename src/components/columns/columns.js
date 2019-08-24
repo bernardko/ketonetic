@@ -15,25 +15,29 @@ const Columns = ({ children, columnLayout }) => {
     switch (columnLayout) {
         case 1:
         return (
-            <section className="container features m-t-lg m-b-lg">
-            <div className="row">
-                <div className="col-sm-12">            
-                {children}
+            <section className="features p-h-lg">
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12">            
+                    {children}
+                    </div>
                 </div>
             </div>
             </section>
         )
         case 2:
         return (
-            <section className="container features m-t-lg m-b-lg">
-            <div className="row">
-                <div className="col-sm-8">            
-                {children}
+            <section className="features p-h-lg">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-8">            
+                        {children}
+                        </div>
+                        <div className="col-sm-4">
+                        <Jumbotron />
+                        </div>
+                    </div>
                 </div>
-                <div className="col-sm-4">
-                <Jumbotron />
-                </div>
-            </div>
             </section>
         )
         default:

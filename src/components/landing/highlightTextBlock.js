@@ -1,7 +1,7 @@
 import React from "react"
 
 const HighlightTextBlock = ({blockData}) => (
-    <section id="testimonials" class="navy-section testimonials" style={{marginBottom: 0}}>
+    <section className={"navy-section " + blockData.section_classes} style={{marginBottom: 0, paddingTop:"80px", paddingBottom:"90px"}}>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center wow zoomIn">
@@ -10,11 +10,8 @@ const HighlightTextBlock = ({blockData}) => (
                         {blockData.title}
                     </h2>
                     <div class="testimonials-text">
-                        <i>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."</i>
+                        <i>{blockData.text}</i>
                     </div>
-                    <small>
-                        <strong>12.02.2014 - Andy Smith</strong>
-                    </small>
                 </div>
             </div>
         </div>

@@ -15,16 +15,16 @@ exports.createPages = ({ graphql, actions }) => {
       {
         wagtail
         {
-            landingPages {
-                slug
-                specificPageType
-                urlPath
-            }
-            categoryPages {
+          landingPages {
               slug
               specificPageType
-              urlPath
-            }
+              pageUrl
+          }
+          categoryPages {
+            slug
+            specificPageType
+            pageUrl
+          }
         }
       }
       
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
             const pageTemplate = path.resolve("./src/templates/" + appLabel + "/" + firstLetter + characterList.join("") + ".js")
             createPage({
                 // Path for this page — required
-                path: page.urlPath,
+                path: page.pageUrl,
                 component: pageTemplate,
                 context: {
                   // Add optional context data to be inserted

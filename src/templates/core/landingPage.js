@@ -10,7 +10,7 @@ const LandingPage = ({data}) => {
   return (
     <Layout pageInfo={{backgroundImage: false}}>
       <SEO title={page.pageTitle} />
-      <StreamBlock streamField={page.body} />
+      <StreamBlock streamField={page.body} pageData={page} />
     </Layout>
   )
 }
@@ -22,10 +22,20 @@ export const query = graphql`
         landingPages(slug: $slug) {
             title
             pageTitle
+            lastPublishedAt
             searchDescription
             slug
             specificPageType
-            urlPath
+            pageUrl
+            author {
+              fullName
+              image {
+                src
+                alt
+              }
+              intro
+              description
+            }
             body
         }
     }
@@ -37,10 +47,20 @@ export const previewQuery = `
     landingPages(slug: $slug, previewToken: $previewToken) {
         title
         pageTitle
+        lastPublishedAt
         searchDescription
         slug
         specificPageType
-        urlPath
+        pageUrl
+        author {
+          fullName
+          image {
+            src
+            alt
+          }
+          intro
+          description
+        }
         body
     }
   }

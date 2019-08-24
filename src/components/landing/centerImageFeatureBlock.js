@@ -29,7 +29,7 @@ const CenterImageFeatureBlock = ({blockData}) => (
             </div>
             )}
             <div class={blockData.image ? "col-md-3 text-center wow fadeInRight" : "col-md-6 text-center wow fadeInRight"}>
-                {(blockData.features_left || []).map((feature, index) => {
+                {(blockData.features_right || []).map((feature, index) => {
                     return (
                         <div>
                             <i class={"fa fa-" + feature.icon + " features-icon"}></i>

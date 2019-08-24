@@ -13,7 +13,7 @@ const CategoryPage = ({data}) => {
     <Layout pageInfo={{backgroundImage: false}}>
         <SEO title={page.pageTitle} />
         {page.body.length > 0 ? (
-            <StreamBlock streamField={page.body} />
+            <StreamBlock streamField={page.body} pageData={page} />
         ) : (
             <Header pageTitle={page.title} intro={page.intro} />
         )}
@@ -32,16 +32,17 @@ export const query = graphql`
                 searchDescription
                 slug
                 specificPageType
-                urlPath
+                pageUrl
                 intro
                 body
                 numPerPage
                 landingPages {
                     title
                     pageTitle
+                    lastPublishedAt
                     slug
                     specificPageType
-                    urlPath
+                    pageUrl
                     intro
                 }
             }
@@ -57,16 +58,17 @@ export const previewQuery = `
             searchDescription
             slug
             specificPageType
-            urlPath
+            pageUrl
             intro
             body
             numPerPage
             landingPages {
                 title
                 pageTitle
+                lastPublishedAt
                 slug
                 specificPageType
-                urlPath
+                pageUrl
                 intro
             }
         }

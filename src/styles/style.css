@@ -62,8 +62,36 @@
 vote-info, .vote-info a {
     font-size: 14px;
 }
-#inSlider {
-    margin-bottom: 40px;
+.landing-page .gray-section {
+    margin: 0;
+}
+.landing-page .theme-section {
+    color: #fff;
+    background-color: #1ab394;
+}
+.landing-page .theme-section p {
+    color: #fff;
+}
+.landing-page .theme-section .social-feed-box {
+    background-color: rgba(255,255,255,.90);
+}
+.landing-page .theme-section .social-body p {
+    color: #676a6c;
+    font-size: 12px;
+    margin: 0;
+}
+.landing-page .theme-section h1 {
+    font-weight: 700;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-shadow: none;
+    letter-spacing: -1.5px;
+}
+.landing-page .highlight-block {
+    padding-top: 80px;
+    padding-bottom: 90px;
+    background-color: #1ab394;
+    background-image: url(http://artoria:8000/static/avatar_all-c5a509a….png);
 }
 @media (min-width: 1000px) {
     .landing-page .wide-image {

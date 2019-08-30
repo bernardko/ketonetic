@@ -43,6 +43,9 @@ export const query = graphql`
                     slug
                     specificPageType
                     pageUrl
+                    author {
+                        fullName
+                    }
                     intro
                 }
             }
@@ -69,6 +72,9 @@ export const previewQuery = `
                 slug
                 specificPageType
                 pageUrl
+                author {
+                    fullName
+                }
                 intro
             }
         }

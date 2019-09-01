@@ -8,7 +8,7 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 wow zoomIn">
-                {pageData.breadcrumbs ? (
+                {pageData.breadcrumbs.length > 0 ? (
                         <>
                         <Breadcrumbs breadcrumbs={pageData.breadcrumbs} />
                         <h1 style={{marginTop:0}}>{blockData.title}</h1>

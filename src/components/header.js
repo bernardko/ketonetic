@@ -9,7 +9,7 @@ const Header = ({ blockData, pageData }) => (
   <section id="header" className="container">
     <div className="row">
         <div className="col-sm-12">
-            {pageData.breadcrumbs ? (
+            {pageData.breadcrumbs.length > 0 ? (
                 <>
                 <Breadcrumbs breadcrumbs={pageData.breadcrumbs} />
                 <h1 style={{marginTop:0}}>{pageData.title}</h1>

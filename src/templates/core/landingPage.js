@@ -37,6 +37,7 @@ export const query = graphql`
               image {
                 src
                 alt
+                credit
               }
               intro
               description
@@ -67,6 +68,7 @@ export const previewQuery = `
           image {
             src
             alt
+            credit
           }
           intro
           description

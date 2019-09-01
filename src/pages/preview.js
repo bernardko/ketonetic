@@ -5,6 +5,9 @@ import { graphql } from 'gatsby'
 import LandingPage, {
     previewQuery as landingPageQuery
   } from '../templates/core/landingPage'
+  import CategoryPage, {
+    previewQuery as categoryPageQuery
+  } from '../templates/core/categoryPage'
 
 const path = require(`path`)
 
@@ -12,6 +15,10 @@ const previewMappings = {
     'core.landingpage': {
         query: landingPageQuery,
         template: LandingPage,
+    },
+    'core.categorypage': {
+        query: categoryPageQuery,
+        template: CategoryPage,
     }
 }
 

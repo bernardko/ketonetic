@@ -1,13 +1,21 @@
 import React from "react"
 import Moment from 'react-moment';
 import 'moment-timezone';
+import Breadcrumbs from '../breadcrumbs'
 
 const ThemeHeaderBlock = ({blockData, pageData}) => (
     <section className={"theme-section " + blockData.section_classes} style={{marginTop:"70px", marginBottom: 0, paddingTop:"15px", paddingBottom:"15px"}}>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 wow zoomIn">
+                {pageData.breadcrumbs ? (
+                        <>
+                        <Breadcrumbs breadcrumbs={pageData.breadcrumbs} />
+                        <h1 style={{marginTop:0}}>{blockData.title}</h1>
+                        </>
+                ):(
                     <h1>{blockData.title}</h1>
+                )}
                 </div>
                 <div class="col-md-8 wow zoomIn m-t-xs">
                     <p>{blockData.text}</p>

@@ -72,6 +72,9 @@ vote-info, .vote-info a {
 .landing-page .theme-section p {
     color: #fff;
 }
+.landing-page .theme-section a {
+    color: #fff;
+}
 .landing-page .theme-section .social-feed-box {
     background-color: rgba(255,255,255,.90);
 }

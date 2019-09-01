@@ -22,6 +22,11 @@ export const query = graphql`
         landingPages(slug: $slug) {
             title
             pageTitle
+            breadcrumbs {
+              menuTitle
+              linkUrl
+            }
+            intro
             lastPublishedAt
             searchDescription
             slug
@@ -47,6 +52,11 @@ export const previewQuery = `
     landingPages(slug: $slug, previewToken: $previewToken) {
         title
         pageTitle
+        breadcrumbs {
+          menuTitle
+          linkUrl
+        }
+        intro
         lastPublishedAt
         searchDescription
         slug

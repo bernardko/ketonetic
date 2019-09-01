@@ -15,7 +15,7 @@ const CategoryPage = ({data}) => {
         {page.body.length > 0 ? (
             <StreamBlock streamField={page.body} pageData={page} />
         ) : (
-            <Header pageTitle={page.title} intro={page.intro} />
+            <Header pageData={page} />
         )}
         <ListingBlock pages={page.landingPages} columnLayout={2} />
     </Layout>
@@ -29,6 +29,10 @@ export const query = graphql`
             categoryPages(slug: $slug) {
                 title
                 pageTitle
+                breadcrumbs {
+                    menuTitle
+                    linkUrl
+                }
                 searchDescription
                 slug
                 specificPageType
@@ -55,9 +59,13 @@ export const query = graphql`
 
 export const previewQuery = `
     query($slug: String, $previewToken: String) {
-        categoryPages($slug: String, $previewToken: String) {
+        categoryPages(slug: $slug, previewToken: $previewToken) {
             title
             pageTitle
+            breadcrumbs {
+                menuTitle
+                linkUrl
+            }
             searchDescription
             slug
             specificPageType

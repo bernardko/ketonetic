@@ -11,6 +11,7 @@ import AuthorBlock from "./landing/authorBlock"
 import AuthorQuoteBlock from "./landing/authorQuoteBlock"
 import WideImageBlock from "./landing/wideImageBlock"
 import ThemeHeaderBlock from "./landing/themeHeaderBlock"
+import Header from "./header"
 
 const StreamBlock = ({streamField, pageData}) => {
     return streamField.map((block, index) => {
@@ -18,6 +19,10 @@ const StreamBlock = ({streamField, pageData}) => {
             case 'theme_header':
                 return (
                     <ThemeHeaderBlock blockData={block.value} pageData={pageData} key={block.type+"-"+index} />
+                )
+            case 'default_header':
+                return (
+                    <Header blockData={block.value} pageData={pageData} key={block.type+"-"+index} />
                 )
             case 'feature_slider':
                 return (

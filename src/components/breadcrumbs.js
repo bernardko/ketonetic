@@ -4,7 +4,7 @@ import React from "react"
 const Breadcrumbs = ({breadcrumbs}) => {
     return breadcrumbs.map((crumb, index) => {
         return (
-            <><a href={crumb.linkUrl}>{crumb.menuTitle}</a> &raquo; </>
+            <><Link to={crumb.linkUrl}>{crumb.menuTitle}</Link> &raquo; </>
         )
     })
 }

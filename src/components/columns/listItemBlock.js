@@ -8,9 +8,9 @@ const ListItemBlock = ({page}) => (
     <div className="vote-item">
         <div className="row">
             <div className="col-md-12">
-                <a href={page.pageUrl} className="vote-title no-vote">
+                <Link className="vote-title no-vote" to={page.pageUrl}>
                     {page.title}
-                </a>
+                </Link>
                 <div className="vote-info no-vote">
                     <i className="fa fa-clock-o"></i> <a href="#">
                         <Moment format="D MMMM YYYY">

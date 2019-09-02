@@ -78,6 +78,9 @@ vote-info, .vote-info a {
 .landing-page .theme-section .social-feed-box {
     background-color: rgba(255,255,255,.90);
 }
+.landing-page .theme-section .social-feed-box a {
+    color:#007bff;
+}
 .landing-page .theme-section .social-body p {
     color: #676a6c;
     font-size: 12px;

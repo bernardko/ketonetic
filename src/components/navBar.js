@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
 
@@ -23,7 +23,7 @@ const CustomNavbar = ({ pageInfo }) => {
             <div className="navbar-wrapper">
                 <nav className="navbar navbar-default navbar-fixed-top navbar-expand-md navbar-scroll" role="navigation">
                     <div className="container">
-                        <a className="navbar-brand" href="/">TIAMAT</a>
+                        <Link className="navbar-brand" to="/">Ketobolic</Link>
                         <div className="navbar-header page-scroll">
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                                 <i className="fa fa-bars"></i>
@@ -33,7 +33,7 @@ const CustomNavbar = ({ pageInfo }) => {
                             <ul className="nav navbar-nav navbar-right">
                                 {data.wagtail.navMenuItems.map((navMenuItem, index) => {
                                     return (
-                                        <li><a className="nav-link page-scroll" href={navMenuItem.linkUrl}>{navMenuItem.name}</a></li>
+                                        <li><Link className="nav-link page-scroll" to={navMenuItem.linkUrl}>{navMenuItem.name}</Link></li>
                                     )
                                 })}
                             </ul>

@@ -17,7 +17,7 @@ const CategoryPage = ({data}) => {
         ) : (
             <Header pageData={page} />
         )}
-        <ListingBlock pages={page.landingPages} columnLayout={2} />
+        <ListingBlock pages={page.landingPages} columnLayout={1} />
     </Layout>
     )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 
 const StackedFeatureListBlock = ({blockData}) => (
-    <section id={blockData.section_id} class={"container " + blockData.section_classes}>
+    <section id={blockData.section_id} className={"container " + blockData.section_classes}>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>

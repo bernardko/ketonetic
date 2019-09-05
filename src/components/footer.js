@@ -7,7 +7,7 @@ const Footer = () => (
         <div className="container">
             <div className="row">
                 <div className="col-lg-12 m-t-lg m-b-lg">
-                    <p><strong>&copy; 2015 Company Name</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p><strong>&copy; 2019 Ketobolic</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
                 </div>
             </div>
         </div>

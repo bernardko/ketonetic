@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import logo_ketonetic from "../img/logo_ketonetic.png"
 
 const CustomNavbar = ({ pageInfo }) => {
   return (<StaticQuery
@@ -23,7 +24,9 @@ const CustomNavbar = ({ pageInfo }) => {
             <div className="navbar-wrapper">
                 <nav className="navbar navbar-default navbar-fixed-top navbar-expand-md navbar-scroll" role="navigation">
                     <div className="container">
-                        <Link className="navbar-brand" to="/">Ketobolic</Link>
+                        <Link className="navbar-brand" to="/">
+                            <img src={logo_ketonetic} width="200" alt="Ketonetic Logo" />
+                        </Link>
                         <div className="navbar-header page-scroll">
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                                 <i className="fa fa-bars"></i>

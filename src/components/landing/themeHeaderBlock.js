@@ -4,7 +4,7 @@ import 'moment-timezone';
 import Breadcrumbs from '../breadcrumbs'
 
 const ThemeHeaderBlock = ({blockData, pageData}) => (
-    <section className={"theme-section " + blockData.section_classes} style={{marginTop:"70px", marginBottom: 0, paddingTop:"15px", paddingBottom:"15px"}}>
+    <section className={"theme-section " + blockData.section_classes} style={{marginBottom: 0, paddingTop:"15px", paddingBottom:"15px"}}>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 wow zoomIn">

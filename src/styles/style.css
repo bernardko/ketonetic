@@ -1,8 +1,24 @@
+a {
+    color:#e77362;
+}
 .landing-page .navy-line-left {
     width: 60px;
     height: 1px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #1ab394;
+    border-bottom: 2px solid #e77362;
+}
+.landing-page .navbar-default .navbar-brand:hover,
+.landing-page .navbar-default .navbar-brand:focus {
+    background-color: #fff;
+}
+.landing-page .navbar-default .navbar-brand {
+    background-color: #fff;
+}
+.navbar-toggler {
+    background-color: #e77362;
+}
+.landing-page .gray-section {
+    background: #f4f4f4;
 }
 .landing-page h1 {
     font-size: 45px;
@@ -25,12 +41,15 @@
     font-size: 20px;
 }
 .landing-page section p {
-    color: #aeaeae;
+    color: #3e3935;
     font-size: 18px;
 }
 .landing-page .bubble {
     height: auto;
     font-size: 18px;
+}
+.landing-page section:nth-child(2) {
+    margin-top: 70px;
 }
 .no-vote {
     margin-left: 0px;
@@ -67,7 +86,7 @@ vote-info, .vote-info a {
 }
 .landing-page .theme-section {
     color: #fff;
-    background-color: #1ab394;
+    background-color: #e77362;
 }
 .landing-page .theme-section p {
     color: #fff;
@@ -79,7 +98,7 @@ vote-info, .vote-info a {
     background-color: rgba(255,255,255,.90);
 }
 .landing-page .theme-section .social-feed-box a {
-    color:#007bff;
+    color:#e77362;
 }
 .landing-page .theme-section .social-body p {
     color: #676a6c;
@@ -96,11 +115,21 @@ vote-info, .vote-info a {
 .landing-page .highlight-block {
     padding-top: 80px;
     padding-bottom: 90px;
-    background-color: #1ab394;
-    background-image: url(http://artoria:8000/static/avatar_all-c5a509a….png);
+    background-color: #e77362;
 }
 @media (min-width: 1000px) {
     .landing-page .wide-image {
         max-width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    body:not(.mini-navbar) {
+        background-color: #fff;
+    }
+    .landing-page section:first-child {
+        margin-top: 50px;
+    }
+    .landing-page .theme-section h1 {
+        font-size: 28px;
     }
 }

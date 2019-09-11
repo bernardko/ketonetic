@@ -3,9 +3,9 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: "/ketobolic",
+  pathPrefix: "/ketonetic",
   siteMetadata: {
-    title: `Ketobolic`,
+    title: `Ketonetic`,
     description: `A goal oriented approach to the ketogenic diet.`,
     author: `Bernard Ko`,
   },
@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ketobolic`,
-        short_name: `Ketobolic`,
+        name: `Ketonetic`,
+        short_name: `Ketonetic`,
         start_url: `/`,
         background_color: `#20232a`,
         theme_color: `#20232a`,

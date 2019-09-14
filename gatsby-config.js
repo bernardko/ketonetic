@@ -8,7 +8,15 @@ module.exports = {
     title: `Ketonetic`,
     description: `A goal oriented approach to the ketogenic diet.`,
     author: `Bernard Ko`,
+    image: `https://www.ketonetic.com/static/ketonetic_share_image.png`,
     siteUrl: `https://www.ketnetic.com`,
+    social: {
+      twitter: {
+        site: '',
+        creator: '@bernard_ko',
+      },
+      fbAppID: '',
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

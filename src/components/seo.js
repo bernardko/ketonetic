@@ -10,9 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-import defaultShareImage from "../img/ketonetic_share_image.png"
-
-function SEO({ description, lang, meta, keywords, title, feedImage }) {
+function SEO({ description, lang, meta, keywords, title, feedImage, isBlogPost }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,6 +19,15 @@ function SEO({ description, lang, meta, keywords, title, feedImage }) {
             title
             description
             author
+            siteUrl
+            image
+            social {
+              twitter {
+                site
+                creator
+              }
+              fbAppID
+            }
           }
         }
       }
@@ -28,7 +35,8 @@ function SEO({ description, lang, meta, keywords, title, feedImage }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const shareImage = feedImage || defaultShareImage
+  const shareImage = feedImage || site.siteMetadata.image
+  const url = site.siteMetadata.siteUrl
 
   return (
     <Helmet
@@ -37,53 +45,6 @@ function SEO({ description, lang, meta, keywords, title, feedImage }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: shareImage,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
     >
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -94,6 +55,23 @@ function SEO({ description, lang, meta, keywords, title, feedImage }) {
       <meta name="application-name" content="Ketonetic" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
+
+      {/* OpenGraph tags */}
+      <meta property="og:url" content={url} />
+      {isBlogPost ? <meta property="og:type" content="article" /> : null}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={shareImage} />
+      {site.siteMetadata.social.fbAppID ? <meta property="fb:app_id" content={site.siteMetadata.social.fbAppID} /> : null }
+
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      {site.siteMetadata.social.twitter.site ? <meta name="twitter:site" content={site.siteMetadata.social.twitter.site} /> : null }
+      {site.siteMetadata.social.twitter.creator ? <meta name="twitter:creator" content={site.siteMetadata.social.twitter.creator} /> : null }
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={shareImage} />
+
       <body className="landing-page no-skin-config" />
     </Helmet>
   )

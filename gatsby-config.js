@@ -1,13 +1,17 @@
+import defaultShareImage from "../img/ketonetic_share_image.png"
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
-  pathPrefix: "/ketonetic",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Ketonetic`,
     description: `A goal oriented approach to the ketogenic diet.`,
     author: `Bernard Ko`,
+    shareImage: defaultShareImage,
+    siteUrl: `https://www.ketnetic.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,8 +31,8 @@ module.exports = {
         name: `Ketonetic`,
         short_name: `Ketonetic`,
         start_url: `/`,
-        background_color: `#20232a`,
-        theme_color: `#20232a`,
+        background_color: `#ffffff`,
+        theme_color: `e77362`,
         display: `minimal-ui`,
       },
     },
@@ -44,5 +48,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
   ],
 }

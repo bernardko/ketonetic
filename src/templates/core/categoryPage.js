@@ -11,7 +11,7 @@ const CategoryPage = ({data}) => {
     const page = data.wagtail.categoryPages[0]
     return (
     <Layout pageInfo={{backgroundImage: false}}>
-        <SEO title={page.pageTitle} />
+        <SEO title={page.pageTitle} description={page.searchDescription} feedImage={page.feedImage} />
         {page.body.length > 0 ? (
             <StreamBlock streamField={page.body} pageData={page} />
         ) : (
@@ -34,6 +34,9 @@ export const query = graphql`
                     linkUrl
                 }
                 searchDescription
+                feedImage {
+                    ...fullImage
+                }
                 slug
                 specificPageType
                 pageUrl
@@ -67,6 +70,9 @@ export const previewQuery = `
                 linkUrl
             }
             searchDescription
+            feedImage {
+                ...fullImage
+            }
             slug
             specificPageType
             pageUrl

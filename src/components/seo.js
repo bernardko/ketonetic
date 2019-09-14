@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, feedImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             title
             description
             author
+            shareImage
           }
         }
       }
@@ -26,6 +27,7 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const shareImage = feedImage || site.siteMetadata.shareImage
 
   return (
     <Helmet
@@ -50,6 +52,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: shareImage,
         },
         {
           name: `twitter:card`,
@@ -78,6 +84,15 @@ function SEO({ description, lang, meta, keywords, title }) {
         )
         .concat(meta)}
     >
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e77362" />
+      <meta name="apple-mobile-web-app-title" content="Ketonetic" />
+      <meta name="application-name" content="Ketonetic" />
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#ffffff" />
       <body className="landing-page no-skin-config" />
     </Helmet>
   )

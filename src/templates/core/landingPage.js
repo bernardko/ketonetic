@@ -9,7 +9,7 @@ const LandingPage = ({data}) => {
   const page = data.wagtail.landingPages[0]
   return (
     <Layout pageInfo={{backgroundImage: false}}>
-      <SEO title={page.pageTitle} />
+      <SEO title={page.pageTitle} description={page.searchDescription} feedImage={page.feedImage} />
       <StreamBlock streamField={page.body} pageData={page} />
     </Layout>
   )
@@ -29,6 +29,9 @@ export const query = graphql`
             intro
             lastPublishedAt
             searchDescription
+            feedImage {
+              ...fullImage
+            }
             slug
             specificPageType
             pageUrl
@@ -60,6 +63,9 @@ export const previewQuery = `
         intro
         lastPublishedAt
         searchDescription
+        feedImage {
+          ...fullImage
+        }
         slug
         specificPageType
         pageUrl

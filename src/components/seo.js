@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import defaultShareImage from "../img/ketonetic_share_image.png"
+
 function SEO({ description, lang, meta, keywords, title, feedImage }) {
   const { site } = useStaticQuery(
     graphql`
@@ -19,7 +21,6 @@ function SEO({ description, lang, meta, keywords, title, feedImage }) {
             title
             description
             author
-            shareImage
           }
         }
       }
@@ -27,7 +28,7 @@ function SEO({ description, lang, meta, keywords, title, feedImage }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const shareImage = feedImage || site.siteMetadata.shareImage
+  const shareImage = feedImage || defaultShareImage
 
   return (
     <Helmet

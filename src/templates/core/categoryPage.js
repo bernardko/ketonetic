@@ -34,7 +34,7 @@ export const query = graphql`
                     linkUrl
                 }
                 searchDescription
-                feedImage {
+                searchImage {
                     ...fullImage
                 }
                 slug
@@ -70,7 +70,7 @@ export const previewQuery = `
                 linkUrl
             }
             searchDescription
-            feedImage {
+            searchImage {
                 ...fullImage
             }
             slug

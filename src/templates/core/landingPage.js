@@ -29,7 +29,7 @@ export const query = graphql`
             intro
             lastPublishedAt
             searchDescription
-            feedImage {
+            searchImage {
               ...fullImage
             }
             slug
@@ -63,7 +63,7 @@ export const previewQuery = `
         intro
         lastPublishedAt
         searchDescription
-        feedImage {
+        searchImage {
           ...fullImage
         }
         slug

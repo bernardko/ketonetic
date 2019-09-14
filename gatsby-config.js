@@ -1,5 +1,3 @@
-import defaultShareImage from "../img/ketonetic_share_image.png"
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -10,7 +8,6 @@ module.exports = {
     title: `Ketonetic`,
     description: `A goal oriented approach to the ketogenic diet.`,
     author: `Bernard Ko`,
-    shareImage: defaultShareImage,
     siteUrl: `https://www.ketnetic.com`,
   },
   plugins: [

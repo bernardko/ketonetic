@@ -8,7 +8,7 @@ a {
     border-bottom: 2px solid #e77362;
 }
 .landing-page .navbar-scroll.navbar-default .nav li a:hover {
-    background-color: #e77362;
+    color: #e77362;
 }
 .landing-page .navbar-default .navbar-brand:hover,
 .landing-page .navbar-default .navbar-brand:focus {

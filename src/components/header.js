@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import Img from "gatsby-image";
 import PropTypes from "prop-types"
 import React from "react"
 import Moment from 'react-moment';
@@ -26,7 +27,7 @@ const Header = ({ blockData, pageData }) => (
                         <div className="social-avatar">
                             {pageData.author.image && (
                                 <a href="" class="float-left">
-                                    <img alt={pageData.author.image.alt} src={pageData.author.image.src} className="rounded-circle" width={50}/>
+                                    <Img alt={pageData.author.image.alt} fixed={pageData.author.image.imageFile.childImageSharp.fixed} className="rounded-circle m-r-sm"/>
                                 </a>
                             )}
                             <div class="media-body" style={{color:"#aeaeae"}}>

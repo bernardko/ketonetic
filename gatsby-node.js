@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require(`path`)
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions
@@ -56,4 +57,36 @@ exports.createPages = ({ graphql, actions }) => {
         result.data.wagtail.categoryPages.forEach(processPages)
     })
 
+}
+
+exports.createResolvers = ({
+  actions,
+  cache,
+  createNodeId,
+  createResolvers,
+  store,
+  reporter,
+}) => {
+  const { createNode } = actions
+  createResolvers({
+    Wagtail_ImageObjectType: {
+      imageFile: {
+        type: `File`,
+        resolve(source, args, context, info) {
+          if (source.src) {
+            return createRemoteFileNode({
+              url: source.src,
+              store,
+              cache,
+              createNode,
+              createNodeId,
+              reporter,
+            })
+          } else {
+            return null
+          }
+        },
+      },
+    },
+  })
 }

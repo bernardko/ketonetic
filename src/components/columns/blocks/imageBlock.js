@@ -5,7 +5,7 @@ import React from "react"
 const ImageBlock = ({blockData}) => (
     <div class="row">
         <div class="col-lg-12 text-center wow fadeInRight">
-            <img src={blockData.src} alt={blockData.alt} class="img-fluid" />
+            <img src={blockData.image.src} alt={blockData.image.alt} class="img-fluid" />
         </div>
     </div>
 )

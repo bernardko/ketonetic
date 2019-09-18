@@ -2,23 +2,24 @@ import React from "react"
 import Moment from 'react-moment';
 import 'moment-timezone';
 import Breadcrumbs from '../breadcrumbs'
+import Img from "gatsby-image"
 
 const ThemeHeaderBlock = ({blockData, pageData}) => (
-    <section className={"theme-section " + blockData.section_classes} style={{marginBottom: 0, paddingTop:"15px", paddingBottom:"15px"}}>
+    <section className={"theme-section " + blockData.value.section_classes} style={{marginBottom: 0, paddingTop:"15px", paddingBottom:"15px"}}>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 wow zoomIn">
                 {pageData.breadcrumbs.length > 0 ? (
                         <>
                         <Breadcrumbs breadcrumbs={pageData.breadcrumbs} />
-                        <h1 style={{marginTop:0}}>{blockData.title}</h1>
+                        <h1 style={{marginTop:0}}>{blockData.value.title}</h1>
                         </>
                 ):(
-                    <h1>{blockData.title}</h1>
+                    <h1>{blockData.value.title}</h1>
                 )}
                 </div>
                 <div class="col-md-8 wow zoomIn m-t-xs">
-                    <p>{blockData.text}</p>
+                    <p>{blockData.value.text}</p>
                 </div>
                 {pageData.author && (
                     <div class="col-md-4 m-t-xs">    
@@ -26,7 +27,7 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                             <div className="social-avatar">
                                 {pageData.author.image && (
                                     <a href="" class="float-left">
-                                        <img alt={pageData.author.image.alt} src={pageData.author.image.src} className="rounded-circle" width={50}/>
+                                        <Img alt={pageData.author.image.alt} fixed={pageData.author.image.imageFile.childImageSharp.fixed} className="rounded-circle m-r-sm" />
                                     </a>
                                 )}
                                 <div class="media-body" style={{color:"#aeaeae"}}>

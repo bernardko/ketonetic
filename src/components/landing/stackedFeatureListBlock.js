@@ -1,15 +1,16 @@
 import React from "react"
+import Img from "gatsby-image"
 
 const StackedFeatureListBlock = ({blockData}) => (
-    <section id={blockData.section_id} className={"container " + blockData.section_classes}>
+    <section id={blockData.value.section_id} className={"container " + blockData.value.section_classes}>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h2>{blockData.title}</h2>
-                <p>{blockData.subtitle}</p>
+                <h2>{blockData.value.title}</h2>
+                <p>{blockData.value.subtitle}</p>
             </div>
         </div>
-        {(blockData.features || []).map((feature, index) => {
+        {(blockData.value.features || []).map((feature, index) => {
             return (
                 <div class="row features-block">
                     <div class="col-lg-6 features-text wow fadeInLeft">
@@ -23,8 +24,8 @@ const StackedFeatureListBlock = ({blockData}) => (
                         )}
                     </div>
                     <div class="col-lg-6 text-right wow fadeInRight">
-                        {feature.image && (
-                            <img src={feature.image.src} alt={feature.image.alt} class="img-fluid float-right" />
+                        {blockData.features[index].image && (
+                            <Img fluid={blockData.features[index].image.imageFile.childImageSharp.fluid} alt={blockData.features[index].image.alt} class="img-fluid float-right" />
                         )}
                     </div>
                 </div>

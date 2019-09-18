@@ -38,14 +38,14 @@ export const query = graphql`
             author {
               fullName
               image {
-                src
-                alt
-                credit
+                ...smallPortrait
               }
               intro
               description
             }
-            body
+            body {
+              ...bodyFields
+            }
         }
     }
   }
@@ -79,7 +79,9 @@ export const previewQuery = `
           intro
           description
         }
-        body
+        body {
+          ...bodyFields
+        }
     }
   }
 `

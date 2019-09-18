@@ -41,7 +41,9 @@ export const query = graphql`
                 specificPageType
                 pageUrl
                 intro
-                body
+                body {
+                    ...bodyFields
+                }
                 numPerPage
                 landingPages {
                     title
@@ -77,7 +79,9 @@ export const previewQuery = `
             specificPageType
             pageUrl
             intro
-            body
+            body {
+                ..bodyFields
+            }
             numPerPage
             landingPages {
                 title

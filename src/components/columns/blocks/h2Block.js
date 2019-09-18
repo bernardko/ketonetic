@@ -5,12 +5,12 @@ import React from "react"
 const H2Block = ({blockData}) => (
     <div class="row">
         <div class="col-lg-12 wow fadeInLeft m-t-lg">
-            {blockData.show_line ? (
+            {blockData.value.show_line ? (
                 <div class="navy-line-left"></div>
-            ) : blockData.tag && (
-                <small>{blockData.tag}</small>
+            ) : blockData.value.tag && (
+                <small>{blockData.value.tag}</small>
             )}
-            <h2>{blockData.title}</h2>
+            <h2>{blockData.value.title}</h2>
         </div>
     </div>
 )

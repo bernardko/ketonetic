@@ -3,17 +3,17 @@ import React from "react"
 const FeatureSliderBlock = ({blockData}) => (
     <div className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
-        {blockData.features.map((feature, index) => {
+        {blockData.value.features.map((feature, index) => {
             const isActive = index == 1 ? "active" : null
             return (
-                <li data-target="#inSlider" data-slide-to={index} className={isActive} key={blockData.section_id+"-indicators-"+index}></li>
+                <li data-target="#inSlider" data-slide-to={index} className={isActive} key={blockData.value.section_id+"-indicators-"+index}></li>
             )
         })}
         </ol>
         <div className="carousel-inner" role="listbox">
-            {blockData.features.map((feature, index) => {
+            {blockData.value.features.map((feature, index) => {
                 return (
-                    <div className="carousel-item active" key={blockData.section_id+"-features-"+index}>
+                    <div className="carousel-item active" key={blockData.value.section_id+"-features-"+index}>
                         <div className="container">
                             <div className="carousel-caption">
                                 <h1>{feature.title}</h1>
@@ -31,14 +31,14 @@ const FeatureSliderBlock = ({blockData}) => (
                             </div>
                             )}
                         </div>
-                        {feature.image && feature.image_position && (
-                            <div className="header-back" style={{background: 'url("'+ feature.image.src +'") '+ feature.image_position}}></div>
+                        {blockData.features[index].image && feature.image_position && (
+                            <div className="header-back" style={{background: 'url("'+ blockData.features[index].image.imageFile.childImageSharp.fluid.src +'") '+ feature.image_position}}></div>
                         )}
                     </div>
                 )
             })}
         </div>
-        {blockData.features.length > 1 && (
+        {blockData.value.features.length > 1 && (
             <>
                 <a className="carousel-control-prev" href="#inSlider" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

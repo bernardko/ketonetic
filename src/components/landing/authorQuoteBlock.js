@@ -7,7 +7,7 @@ const AuthorQuoteBlock = ({blockData}) => (
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <div class="bubble">
-                    {blockData.quote}
+                    {blockData.value.quote}
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="float-left">
@@ -17,10 +17,10 @@ const AuthorQuoteBlock = ({blockData}) => (
                     </a>
                     <div class="media-body">
                         <div class="commens-name">
-                            {blockData.first_name + " " + blockData.last_name}
+                            {blockData.value.first_name + " " + blockData.last_name}
                         </div>
-                        {blockData.position && (
-                            <small class="text-muted">{blockData.position}</small>
+                        {blockData.value.position && (
+                            <small class="text-muted">{blockData.value.position}</small>
                         )}
                     </div>
                 </div>

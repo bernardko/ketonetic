@@ -15,58 +15,54 @@ import Header from "./header"
 
 const StreamBlock = ({streamField, pageData}) => {
     return streamField.map((block, index) => {
-        switch (block.type) {
+        switch (block.blockType) {
             case 'theme_header':
                 return (
-                    <ThemeHeaderBlock blockData={block.value} pageData={pageData} key={block.type+"-"+index} />
+                    <ThemeHeaderBlock blockData={block} pageData={pageData} key={block.blockType+"-"+index} />
                 )
             case 'default_header':
                 return (
-                    <Header blockData={block.value} pageData={pageData} key={block.type+"-"+index} />
+                    <Header blockData={block} pageData={pageData} key={block.blockType+"-"+index} />
                 )
             case 'feature_slider':
                 return (
-                    <FeatureSliderBlock blockData={block.value} key={block.type+"-"+index} />
+                    <FeatureSliderBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'text_feature_row':
                 return (
-                    <TextFeatureRowBlock blockData={block.value} key={block.type+"-"+index} />
+                    <TextFeatureRowBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'center_image_feature':
                 return (
-                    <CenterImageFeatureBlock blockData={block.value} key={block.type+"-"+index} />
+                    <CenterImageFeatureBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'stacked_feature_list':
                 return (
-                    <StackedFeatureListBlock blockData={block.value} key={block.type+"-"+index} />
-                )
-            case 'portrait_item_row':
-                return (
-                    <FeatureSliderBlock blockData={block.value} />
+                    <StackedFeatureListBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'column':
                 return (
-                    <ColumnBlock blockData={block.value.content} columnLayout={block.value.columns} key={block.type+"-"+index} />
+                    <ColumnBlock blockData={block} columnLayout={block.value.columns} key={block.blockType+"-"+index} />
                 )
             case 'highlight_text':
                 return (
-                    <HighlightTextBlock blockData={block.value} key={block.type+"-"+index} />
+                    <HighlightTextBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'wide_image':
                 return (
-                    <WideImageBlock blockData={block.value} key={block.type+"-"+index} />
+                    <WideImageBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'raw_html':
                 return (
-                    <FeatureSliderBlock blockData={block.value} key={block.type+"-"+index} />
+                    <FeatureSliderBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'author':
                 return (
-                    <AuthorBlock blockData={block.value} key={block.type+"-"+index} />
+                    <AuthorBlock blockData={block} key={block.blockType+"-"+index} />
                 )
             case 'author_quote':
                 return (
-                    <AuthorQuoteBlock blockData={block.value} key={block.type+"-"+index} />
+                    <AuthorQuoteBlock blockData={block} key={block.blockType+"-"+index} />
                 )
         }
     })

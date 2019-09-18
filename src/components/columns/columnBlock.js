@@ -12,31 +12,31 @@ import H2Block from "./blocks/h2Block"
 
 const ColumnBlock = ({blockData, columnLayout}) => (
     <Columns columnLayout={columnLayout}>
-        {blockData.map((block, index) => {
+        {blockData.value.content.map((block, index) => {
             switch (block.type) {
                 case 'tagged_h2':
                     return (
-                        <TaggedH2Block blockData={block.value} />
+                        <TaggedH2Block blockData={block} />
                     )
                 case 'line_h2':
                     return (
-                        <LineH2Block blockData={block.value} />
+                        <LineH2Block blockData={block} />
                     )
                 case 'h2':
                     return (
-                        <H2Block blockData={block.value} />
+                        <H2Block blockData={block} />
                     )
                 case 'image':
                     return (
-                        <ImageBlock blockData={block.value} />
+                        <ImageBlock blockData={block} />
                     )
                 case 'rich_text':
                     return (
-                        <RichTextBlock blockData={block.value} />
+                        <RichTextBlock blockData={block} />
                     )
                 case 'action_button':
                     return (
-                        <ActionButtonBlock blockData={block.value} />
+                        <ActionButtonBlock blockData={block} />
                     )
             }
         })}

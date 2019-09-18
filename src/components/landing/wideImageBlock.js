@@ -1,9 +1,10 @@
 import React from "react"
+import Img from "gatsby-image"
 
 const WideImageBlock = ({blockData}) => (
-    <section id={blockData.section_id} class={"m-t-lg " + blockData.section_classes}>
+    <section id={blockData.value.section_id} class={"m-t-lg " + blockData.value.section_classes}>
         <div className="col-lg-12 text-center wow zoomIn">
-            <img src={blockData.image.src} alt={blockData.image.alt} className="img-fluid wide-image" />
+            <Img alt={blockData.image.alt} fluid={blockData.image.imageFile.childImageSharp.fluid} className="img-fluid wide-image" />
         </div>
     </section>
 )

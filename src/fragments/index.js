@@ -2,6 +2,100 @@
 import { graphql } from 'gatsby'
 
 export const gatsbyFragments = graphql`
+  fragment bodyFields on Wagtail_BodyType {
+    __typename
+    ... on Wagtail_DefaultStreamBlock {
+      blockType
+      value
+    }
+    ... on Wagtail_WideImageBlock {
+      blockType
+      value
+      image {
+        id
+        src
+        imageFile {
+          childImageSharp {
+            fluid (maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        alt
+        credit
+      }
+    }
+    ... on Wagtail_FeatureSliderBlock {
+      blockType
+      value
+      features {
+        image {
+          id
+          src
+          imageFile {
+            childImageSharp {
+              fluid (maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+          credit
+        }
+      }
+    }
+    ... on Wagtail_CenterImageFeatureBlock {
+      blockType
+      value
+      image {
+        id
+        src
+        imageFile {
+          childImageSharp {
+            fluid (maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        alt
+        credit
+      }
+    }
+    ... on Wagtail_StackedFeatureListBlock {
+      blockType
+      value
+      features {
+        image {
+          id
+          src
+          imageFile {
+            childImageSharp {
+              fluid (maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+          credit
+        }
+      }
+    }
+  }
+
+  fragment smallPortrait on Wagtail_ImageObjectType {
+    id
+    src
+    imageFile {
+      childImageSharp {
+        fixed (width: 40) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    alt
+    credit
+  }
+
   fragment quarterImage on Wagtail_ImageObjectType {
     src: rendition(format: "quarter") {
       url

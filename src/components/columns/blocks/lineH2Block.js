@@ -6,7 +6,7 @@ const LineH2Block = ({blockData}) => (
     <div class="row">
         <div class="col-lg-12 wow fadeInLeft">
             <div class="navy-line-left"></div>
-            <h2 class="line">{blockData.title}</h2>
+            <h2 class="line">{blockData.value.title}</h2>
         </div>
     </div>
 )

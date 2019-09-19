@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 
 const AuthorBlock = ({blockData}) => (
     <section id="team" class="gray-section features team p-h-lg">
@@ -14,7 +15,7 @@ const AuthorBlock = ({blockData}) => (
                 <div class="col-sm-2">
                     <div class="team-member wow zoomIn">
                         {blockData.value.portrait && (
-                            <img src={blockData.portrait.src} alt={blockData.portrait.alt} class="img-fluid rounded-circle" />
+                            <Img alt={blockData.portrait.alt} fluid={blockData.portrait.imageFile.childImageSharp.fluid} className="img-fluid rounded-circle" />
                         )}
                         <h4><span class="navy">{blockData.value.first_name}</span> {blockData.value.last_name}</h4>
                     </div>

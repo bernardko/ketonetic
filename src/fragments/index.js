@@ -25,6 +25,23 @@ export const gatsbyFragments = graphql`
         credit
       }
     }
+    ... on Wagtail_AuthorBlock {
+      blockType
+      value
+      portrait {
+        id
+        src
+        imageFile {
+          childImageSharp {
+            fluid (maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        alt
+        credit
+      }
+    }
     ... on Wagtail_FeatureSliderBlock {
       blockType
       value

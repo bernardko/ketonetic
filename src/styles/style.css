@@ -152,6 +152,16 @@ vote-info, .vote-info a {
         max-width: 90%;
     }
 }
+@media (min-width:768px) {
+    .landing-page .site-content div:nth-child(1) {
+        margin-top: 70px;
+    }
+}
+@media (min-width:991px) {
+    .landing-page .site-content div:nth-child(1) {
+        margin-top: 0;
+    }
+}
 @media (max-width: 768px) {
     body:not(.mini-navbar) {
         background-color: #fff;

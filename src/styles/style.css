@@ -154,7 +154,7 @@ vote-info, .vote-info a {
 }
 @media (min-width:768px) {
     .landing-page .site-content div:nth-child(1) {
-        margin-top: 70px;
+        margin-top: 50px;
     }
 }
 @media (min-width:991px) {

@@ -155,9 +155,11 @@ vote-info, .vote-info a {
 }
 .landing-page footer .nav > li a {
     color: #676a6c;
+    padding: 14px 20px 14px 25px;
 }
 .landing-page footer .nav > li a:hover {
     color: #e77362;
+    padding: 14px 20px 14px 25px;
 }
 @media (min-width: 1000px) {
     .landing-page .wide-image {
@@ -192,5 +194,10 @@ vote-info, .vote-info a {
     }
     .landing-page .site-content > section:nth-child(1) {
         margin-top: 60px;
+    }
+    .landing-page footer .nav > li > strong,
+    .landing-page footer .nav > li > a,
+    .landing-page footer .nav > li > a:hover {
+        padding: 10px 10px 15px 10px;
     }
 }

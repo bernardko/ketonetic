@@ -164,6 +164,9 @@ vote-info, .vote-info a {
     .landing-page .site-content > div:nth-child(1) {
         margin-top: 0;
     }
+    .landing-page .site-content > section:nth-child(1) {
+        margin-top: 70px;
+    }
 }
 @media (max-width: 768px) {
     body:not(.mini-navbar) {

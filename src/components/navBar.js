@@ -32,7 +32,7 @@ const CustomNavbar = ({ pageInfo }) => {
                                 <i className="fa fa-bars"></i>
                             </button>
                         </div>
-                        <div className="collapse navbar-collapse justify-content-end" id="navbar">
+                        <div className="collapse navbar-collapse" id="navbar">
                             <ul className="nav navbar-nav navbar-right">
                                 {data.wagtail.navMenuItems.map((navMenuItem, index) => {
                                     return (

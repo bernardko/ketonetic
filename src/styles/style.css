@@ -1,3 +1,23 @@
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.site-content {
+    flex-grow: 1;
+}
+.landing-page .site-content section:nth-child(1) {
+    margin-top: 70px;
+}
+.landing-page .btn-primary {
+    background-color: #e77362;
+}
+.landing-page .btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):focus {
+    background-color: #e77362;
+    border-color:#e77362;
+}
 a {
     color:#e77362;
 }
@@ -55,9 +75,7 @@ a {
     height: auto;
     font-size: 18px;
 }
-.landing-page section:nth-child(2) {
-    margin-top: 70px;
-}
+\
 .no-vote {
     margin-left: 0px;
 }
@@ -123,6 +141,10 @@ vote-info, .vote-info a {
     padding-top: 80px;
     padding-bottom: 90px;
     background-color: #e77362;
+}
+.middle-box h1 {
+    color:#e77362;
+    font-size: 170px;
 }
 @media (min-width: 1000px) {
     .landing-page .wide-image {

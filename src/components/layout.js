@@ -23,11 +23,11 @@ const Layout = ({ children, pageInfo }) => (
       }
     `}
     render={data => (
-      <>
-      <Navbar pageInfo={pageInfo} />
-      {children}
-      <Footer />
-      </>
+      <div className="site">
+        <Navbar pageInfo={pageInfo} />
+          <div className="site-content">{children}</div>
+        <Footer />
+      </div>
     )}
   />
 )

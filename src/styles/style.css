@@ -11,6 +11,7 @@
 }
 .landing-page .btn-primary {
     background-color: #e77362;
+    border-color:#e77362;
 }
 .landing-page .btn-primary:hover,
 .btn-primary:not(:disabled):not(.disabled):active,

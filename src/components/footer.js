@@ -9,7 +9,7 @@ const Footer = () => (
                 <ul class="nav nav-pills nav-footer">
                     <li><strong>&copy; 2019 ketonetic.com</strong></li>
                     <li>
-                        <a href="/privacy-policy/">Privacy Policy</a>
+                        <Link to="/privacy-policy/">Privacy Policy</Link>
                     </li>
                 </ul>
             </div>

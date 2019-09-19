@@ -147,6 +147,18 @@ vote-info, .vote-info a {
     color:#e77362;
     font-size: 170px;
 }
+.landing-page footer .nav > li > strong {
+    color: #a7b1c2;
+    font-weight: 600;
+    padding: 14px 20px 14px 25px;
+    display: block;
+}
+.landing-page footer .nav > li a {
+    color: #676a6c;
+}
+.landing-page footer .nav > li a:hover {
+    color: #e77362;
+}
 @media (min-width: 1000px) {
     .landing-page .wide-image {
         max-width: 90%;

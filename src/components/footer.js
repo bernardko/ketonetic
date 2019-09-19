@@ -6,9 +6,12 @@ const Footer = () => (
     <footer className="mt-auto py-3 gray-section">
         <div className="container">
             <div className="row">
-                <div className="col-lg-12 m-t-lg m-b-lg">
-                    <p><strong>&copy; 2019 ketonetic.com</strong></p>
-                </div>
+                <ul class="nav nav-pills nav-footer">
+                    <li><strong>&copy; 2019 ketonetic.com</strong></li>
+                    <li>
+                        <a href="/privacy-policy/">Privacy Policy</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>

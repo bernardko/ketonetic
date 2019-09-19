@@ -2,8 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 
 const AuthorBlock = ({blockData}) => (
-    <section id="team" class="gray-section features team p-h-lg">
-        <div className={"container " + blockData.value.section_classes}>
+    <section id="team" className={"gray-section features team p-h-lg " + + blockData.value.section_classes}>
+        <div className="container">
             <div class="row m-b-lg">
                 <div class="col-lg-12">
                     <div class="navy-line-left"></div>

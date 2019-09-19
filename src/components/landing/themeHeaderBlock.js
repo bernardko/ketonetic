@@ -18,7 +18,7 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                     <h1>{blockData.value.title}</h1>
                 )}
                 </div>
-                <div class="col-md-8 wow zoomIn m-t-xs">
+                <div className={"col-md-" + (pageData.author ? "8" : "12") + " wow zoomIn m-t-xs"}>
                     <p>{blockData.value.text}</p>
                 </div>
                 {pageData.author && (
@@ -26,12 +26,12 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                         <div className="social-feed-box b-r-md">
                             <div className="social-avatar">
                                 {pageData.author.image && (
-                                    <a href="" class="float-left">
+                                    <a href="/about/" class="float-left">
                                         <Img alt={pageData.author.image.alt} fixed={pageData.author.image.imageFile.childImageSharp.fixed} className="rounded-circle m-r-sm" />
                                     </a>
                                 )}
                                 <div class="media-body" style={{color:"#aeaeae"}}>
-                                    <a href="#">
+                                    <a href="/about/">
                                          {pageData.author.fullName}
                                     </a>
                                     <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></small>

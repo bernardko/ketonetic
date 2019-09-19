@@ -26,12 +26,12 @@ const Header = ({ blockData, pageData }) => (
                     <div className="social-feed-box no-borders">
                         <div className="social-avatar">
                             {pageData.author.image && (
-                                <a href="" class="float-left">
+                                <a href="/about/" class="float-left">
                                     <Img alt={pageData.author.image.alt} fixed={pageData.author.image.imageFile.childImageSharp.fixed} className="rounded-circle m-r-sm"/>
                                 </a>
                             )}
                             <div class="media-body" style={{color:"#aeaeae"}}>
-                                <a href="#">
+                                <a href="/about/">
                                     {pageData.author.fullName}
                                 </a>
                                 <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></small>

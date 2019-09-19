@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 
 const AuthorBlock = ({blockData}) => (
     <section id="team" class="gray-section features team p-h-lg">
-        <div class="container">
+        <div className={"container " + blockData.value.section_classes}>
             <div class="row m-b-lg">
                 <div class="col-lg-12">
                     <div class="navy-line-left"></div>

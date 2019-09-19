@@ -6,7 +6,7 @@
 .site-content {
     flex-grow: 1;
 }
-.landing-page .site-content section:nth-child(1) {
+.landing-page .site-content > section:nth-child(1) {
     margin-top: 70px;
 }
 .landing-page .btn-primary {
@@ -153,12 +153,12 @@ vote-info, .vote-info a {
     }
 }
 @media (min-width:768px) {
-    .landing-page .site-content div:nth-child(1) {
+    .landing-page .site-content > div:nth-child(1) {
         margin-top: 50px;
     }
 }
 @media (min-width:991px) {
-    .landing-page .site-content div:nth-child(1) {
+    .landing-page .site-content > div:nth-child(1) {
         margin-top: 0;
     }
 }
@@ -169,10 +169,10 @@ vote-info, .vote-info a {
     .landing-page .theme-section h1 {
         font-size: 28px;
     }
-    .landing-page .site-content section:nth-child(1) {
-        margin-top: 140px;
-    }
     .landing-page .nav.navbar-right {
         flex-direction: row;
+    }
+    .landing-page .site-content section:nth-child(1) {
+        margin-top: 60px;
     }
 }

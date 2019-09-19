@@ -156,6 +156,9 @@ vote-info, .vote-info a {
     .landing-page .site-content > div:nth-child(1) {
         margin-top: 50px;
     }
+    .landing-page .site-content > section:nth-child(1) {
+        margin-top: 140px;
+    }
 }
 @media (min-width:991px) {
     .landing-page .site-content > div:nth-child(1) {
@@ -172,7 +175,7 @@ vote-info, .vote-info a {
     .landing-page .nav.navbar-right {
         flex-direction: row;
     }
-    .landing-page .site-content section:nth-child(1) {
+    .landing-page .site-content > section:nth-child(1) {
         margin-top: 60px;
     }
 }

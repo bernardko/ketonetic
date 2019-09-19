@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,7 +13,7 @@ const NotFoundPage = () => (
       <div class="error-desc">
         Sorry, this doesn't seem to exist. Try navigating the site from the main menu at the top of the page.
       </div>
-      <a href="/" class="btn btn-primary m-t-xl">Return to Home Page</a>
+      <Link to="/" className="btn btn-primary m-t-xl">Return to Home Page</Link>
     </section>
   </Layout>
 )

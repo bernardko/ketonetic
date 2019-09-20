@@ -12,11 +12,11 @@ const AuthorQuoteBlock = ({blockData}) => (
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="float-left">
-                        {blockData.portrait && blockData.portrait.imageFile ? (
+                        {blockData.portrait ? blockData.portrait.imageFile ? (
                             <Img alt={blockData.portrait.alt} fluid={blockData.portrait.imageFile.childImageSharp.fluid} className="img-fluid rounded-circle" />
                         ):(
                             <img alt={blockData.portrait.alt} src={blockData.portrait.src} className="img-fluid rounded-circle" />
-                        )}
+                        ):null}
                     </a>
                     <div class="media-body">
                         <div class="commens-name">

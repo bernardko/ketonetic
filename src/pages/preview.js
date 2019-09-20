@@ -2,6 +2,7 @@ import React from 'react'
 import qs from 'query-string'
 import { request } from 'graphql-request'
 import { graphql } from 'gatsby'
+import { previewFragments } from '../fragments'
 import LandingPage, {
     previewQuery as landingPageQuery
   } from '../templates/core/landingPage'
@@ -36,7 +37,7 @@ class WagtailPreview extends React.Component {
 
            const pageMap = previewMappings[content_type]
            const pageTemplate = pageMap['template']
-           const query = pageMap['query']
+           const query = previewFragments + pageMap['query']
 
             if (token) {
                 this.setState({ Template: pageTemplate })

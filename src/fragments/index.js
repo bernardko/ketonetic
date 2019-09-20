@@ -185,13 +185,13 @@ export const gatsbyFragments = graphql`
 `
 
 export const previewFragments = `
-  fragment bodyFields on Wagtail_BodyType {
+  fragment bodyFields on BodyType {
     __typename
-    ... on Wagtail_DefaultStreamBlock {
+    ... on DefaultStreamBlock {
       blockType
       value
     }
-    ... on Wagtail_WideImageBlock {
+    ... on WideImageBlock {
       blockType
       value
       image {
@@ -208,7 +208,7 @@ export const previewFragments = `
         credit
       }
     }
-    ... on Wagtail_AuthorBlock {
+    ... on AuthorBlock {
       blockType
       value
       portrait {
@@ -225,7 +225,7 @@ export const previewFragments = `
         credit
       }
     }
-    ... on Wagtail_FeatureSliderBlock {
+    ... on FeatureSliderBlock {
       blockType
       value
       features {
@@ -244,7 +244,7 @@ export const previewFragments = `
         }
       }
     }
-    ... on Wagtail_CenterImageFeatureBlock {
+    ... on CenterImageFeatureBlock {
       blockType
       value
       image {
@@ -261,7 +261,7 @@ export const previewFragments = `
         credit
       }
     }
-    ... on Wagtail_StackedFeatureListBlock {
+    ... on StackedFeatureListBlock {
       blockType
       value
       features {
@@ -282,7 +282,7 @@ export const previewFragments = `
     }
   }
 
-  fragment smallPortrait on Wagtail_ImageObjectType {
+  fragment smallPortrait on ImageObjectType {
     id
     src
     imageFile {

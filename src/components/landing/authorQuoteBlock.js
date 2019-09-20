@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 
 const AuthorQuoteBlock = ({blockData}) => (
 <section class="comments gray-section" style={{marginTop:0}}>
@@ -11,8 +12,10 @@ const AuthorQuoteBlock = ({blockData}) => (
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="float-left">
-                        {blockData.portrait && (
-                            <img src={blockData.portrait.src} alt={blockData.portrait.alt} />
+                        {blockData.portrait && blockData.portrait.imageFile ? (
+                            <Img alt={blockData.portrait.alt} fluid={blockData.portrait.imageFile.childImageSharp.fluid} className="img-fluid rounded-circle" />
+                        ):(
+                            <img alt={blockData.portrait.alt} src={blockData.portrait.src} className="img-fluid rounded-circle" />
                         )}
                     </a>
                     <div class="media-body">

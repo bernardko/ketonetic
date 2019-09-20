@@ -27,7 +27,11 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                             <div className="social-avatar">
                                 {pageData.author.image && (
                                     <a href="/about/" class="float-left">
-                                        <Img alt={pageData.author.image.alt} fixed={pageData.author.image.imageFile.childImageSharp.fixed} className="rounded-circle m-r-sm" />
+                                        {pageData.author.image.imageFile ? (
+                                            <Img alt={pageData.author.image.alt} fixed={pageData.author.image.imageFile.childImageSharp.fixed} className="rounded-circle m-r-sm" />
+                                        ):(
+                                            <img alt={pageData.author.image.alt} src={pageData.author.image.src} className="rounded-circle m-r-sm"/>
+                                        )}
                                     </a>
                                 )}
                                 <div class="media-body" style={{color:"#aeaeae"}}>

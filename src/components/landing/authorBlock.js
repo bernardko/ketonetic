@@ -14,8 +14,10 @@ const AuthorBlock = ({blockData}) => (
             <div class="row">
                 <div class="col-sm-2">
                     <div class="team-member wow zoomIn">
-                        {blockData.value.portrait && (
+                        {blockData.value.portrait && blockData.portrait.imageFile ? (
                             <Img alt={blockData.portrait.alt} fluid={blockData.portrait.imageFile.childImageSharp.fluid} className="img-fluid rounded-circle" />
+                        ):(
+                            <img alt={blockData.portrait.alt} src={blockData.portrait.src} className="img-fluid rounded-circle" />
                         )}
                         <h4><span class="navy">{blockData.value.first_name}</span> {blockData.value.last_name}</h4>
                     </div>

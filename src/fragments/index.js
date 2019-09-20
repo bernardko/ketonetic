@@ -197,13 +197,6 @@ export const previewFragments = `
       image {
         id
         src
-        imageFile {
-          childImageSharp {
-            fluid (maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         alt
         credit
       }
@@ -214,13 +207,6 @@ export const previewFragments = `
       portrait {
         id
         src
-        imageFile {
-          childImageSharp {
-            fluid (maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         alt
         credit
       }
@@ -232,13 +218,6 @@ export const previewFragments = `
         image {
           id
           src
-          imageFile {
-            childImageSharp {
-              fluid (maxWidth: 1920) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           alt
           credit
         }
@@ -250,13 +229,6 @@ export const previewFragments = `
       image {
         id
         src
-        imageFile {
-          childImageSharp {
-            fluid (maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         alt
         credit
       }
@@ -268,13 +240,6 @@ export const previewFragments = `
         image {
           id
           src
-          imageFile {
-            childImageSharp {
-              fluid (maxWidth: 1920) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           alt
           credit
         }
@@ -285,13 +250,6 @@ export const previewFragments = `
   fragment smallPortrait on ImageObjectType {
     id
     src
-    imageFile {
-      childImageSharp {
-        fixed (width: 40) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     alt
     credit
   }

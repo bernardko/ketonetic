@@ -31,8 +31,10 @@ const FeatureSliderBlock = ({blockData}) => (
                             </div>
                             )}
                         </div>
-                        {blockData.features[index].image && feature.image_position && (
+                        {blockData.features[index].image && blockData.features[index].image.imageFile && feature.image_position ? (
                             <div className="header-back" style={{background: 'url("'+ blockData.features[index].image.imageFile.childImageSharp.fluid.src +'") '+ feature.image_position}}></div>
+                        ):(
+                            <div className="header-back" style={{background: 'url("'+ blockData.features[index].image.src +'") '+ feature.image_position}}></div>
                         )}
                     </div>
                 )

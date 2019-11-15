@@ -29,7 +29,7 @@ const StackedFeatureListBlock = ({blockData}) => (
                             <Img fluid={blockData.features[index].image.imageFile.childImageSharp.fluid} alt={blockData.features[index].image.alt} class="img-fluid float-right" />
                         )}
                     </div>
-                    ):null}
+                    ):null:null}
                 </div>
             )
         })}

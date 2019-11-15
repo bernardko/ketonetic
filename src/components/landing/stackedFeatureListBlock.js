@@ -13,7 +13,7 @@ const StackedFeatureListBlock = ({blockData}) => (
         {(blockData.value.features || []).map((feature, index) => {
             return (
                 <div class="row features-block">
-                    <div class={blockData.features[index].image ? "col-lg-12 features-text wow fadeInLeft" :"col-lg-6 features-text wow fadeInLeft"}>
+                    <div class={blockData.features[index].image ? "col-lg-6 features-text wow fadeInLeft" :"col-lg-12 features-text wow fadeInLeft"}>
                         {feature.highlight_tag && (
                             <small>{feature.highlight_tag}</small>
                         )}

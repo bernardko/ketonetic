@@ -2,7 +2,7 @@ import React from "react"
 
 const TextFeatureRowBlock = ({blockData}) => (
     <section id={blockData.value.section_id} className={"p-h-xl " + blockData.value.section_classes}>
-        <div className="container">
+        <div className="container services">
             <div className="row">
                 {blockData.value.paragraphs.map((paragraph, index) => {
                     const gridSize = 12/blockData.value.paragraphs.length

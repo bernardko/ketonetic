@@ -25,7 +25,7 @@ const StackedFeatureListBlock = ({blockData}) => (
                     </div>
                     {blockData.features[index].image ? blockData.features[index].image.imageFile ? (
                     <div class="col-lg-6 text-right wow fadeInRight">
-                        {blockData.features[index].image && (
+                        {blockData.features[index].imag7e && (
                             <Img fluid={blockData.features[index].image.imageFile.childImageSharp.fluid} alt={blockData.features[index].image.alt} class="img-fluid float-right" />
                         )}
                     </div>

@@ -46,7 +46,7 @@ module.exports = {
       options: {
         typeName: "Wagtail",
         fieldName: 'wagtail',
-        url: process.env.GATSBY_WAGTAIL_ENDPOINT || 'http://artoria:8001/graphql/',
+        url: process.env.GATSBY_WAGTAIL_ENDPOINT || 'http://artoria:8000/graphql/',
         // refetchInterval: 10,
       },
     },

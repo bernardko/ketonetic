@@ -3,10 +3,11 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import ActionButtonBlock from "./blocks/actionButtonBlock"
-import ImageBlock from "./blocks/imageBlock"
+import TextImageBlock from "./blocks/textImageBlock"
 import LineH2Block from "./blocks/lineH2Block"
 import TaggedH2Block from "./blocks/taggedH2Block"
 import RichTextBlock from "./blocks/richTextBlock"
+import SummaryBlock from "./blocks/summaryBlock"
 import Columns from "./columns"
 import H2Block from "./blocks/h2Block"
 
@@ -26,13 +27,17 @@ const ColumnBlock = ({blockData, columnLayout}) => (
                     return (
                         <H2Block blockData={block} />
                     )
-                case 'image':
+                case 'text_image':
                     return (
-                        <ImageBlock blockData={block} />
+                        <TextImageBlock blockData={block} blockContent={blockData.content[index]} />
                     )
                 case 'rich_text':
                     return (
                         <RichTextBlock blockData={block} />
+                    )
+                case 'summary':
+                    return (
+                        <SummaryBlock blockData={block} />
                     )
                 case 'action_button':
                     return (

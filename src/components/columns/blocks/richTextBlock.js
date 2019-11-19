@@ -5,7 +5,7 @@ import ReactHtmlParser from "react-html-parser"
 
 const RichTextBlock = ({blockData}) => (
     <div class="row">
-        <div class="col-lg-12 wow fadeInLeft">
+        <div class="col-lg-12 wow fadeInLeft richText">
         {ReactHtmlParser(blockData.value)}
         </div>
     </div>

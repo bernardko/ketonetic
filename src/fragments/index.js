@@ -77,6 +77,44 @@ export const gatsbyFragments = graphql`
         alt
         credit
       }
+      featuresLeft {
+        ... on Wagtail_IconTextParagraphBlock {
+          blockType
+          value
+          image {
+            id
+            src
+            imageFile {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            alt
+            credit
+          }
+        }
+      }
+      featuresRight {
+        ... on Wagtail_IconTextParagraphBlock {
+          blockType
+          value
+          image {
+            id
+            src
+            imageFile {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            alt
+            credit
+          }
+        }
+      }
     }
     ... on Wagtail_StackedFeatureListBlock {
       blockType
@@ -94,6 +132,29 @@ export const gatsbyFragments = graphql`
           }
           alt
           credit
+        }
+      }
+    }
+    ... on Wagtail_ColumnBlock {
+      blockType
+      value
+      content {
+        ... on Wagtail_TextImageBlock {
+          blockType
+          value
+          image {
+            id
+            src
+            imageFile {
+              childImageSharp {
+                fluid (maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+            credit
+          }
         }
       }
     }
@@ -232,6 +293,30 @@ export const previewFragments = `
         alt
         credit
       }
+      featuresLeft {
+        ... on IconTextParagraphBlock {
+          blockType
+          value
+          image {
+            id
+            src
+            alt
+            credit
+          }
+        }
+      }
+      featuresRight {
+        ... on IconTextParagraphBlock {
+          blockType
+          value
+          image {
+            id
+            src
+            alt
+            credit
+          }
+        }
+      }
     }
     ... on StackedFeatureListBlock {
       blockType
@@ -242,6 +327,29 @@ export const previewFragments = `
           src
           alt
           credit
+        }
+      }
+    }
+    ... on ColumnBlock {
+      blockType
+      value
+      content {
+        ... on TextImageBlock {
+          blockType
+          value
+          image {
+            id
+            src
+            imageFile {
+              childImageSharp {
+                fluid (maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+            credit
+          }
         }
       }
     }

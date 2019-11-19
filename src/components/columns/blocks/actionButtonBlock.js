@@ -4,9 +4,9 @@ import React from "react"
 
 const ActionButtonBlock = ({blockData}) => (
     <div class="row">
-        <div class="col-lg-12 wow fadeInLeft">
+        <div class={blockData.value.align_center ? "col-lg-12 wow fadeInLeft text-center" : "col-lg-12 wow fadeInLeft"}>
             <p>{blockData.value.description}</p>
-            <a href={blockData.value.button_url} class="btn btn-primary">{blockData.value.button_text}</a>    
+            <a href={blockData.value.button_url} class="btn btn-primary btn-rounded">{blockData.value.button_text}</a>    
         </div>
     </div>
 )

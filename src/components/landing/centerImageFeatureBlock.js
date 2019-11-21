@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 
 const CenterImageFeatureBlock = ({blockData}) => (
-    <section id={blockData.value.section_id} class={"p-xl" + blockData.value.section_classes}>
+    <section id={blockData.value.section_id} class={"p-xl " + blockData.value.section_classes}>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>

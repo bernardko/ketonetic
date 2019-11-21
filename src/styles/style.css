@@ -38,7 +38,9 @@ a {
     background-color: #fff;
     border-color: #fff;
     padding: 0;
-    margin-top: -9px;
+}
+.landing-page .navbar-scroll .navbar-nav > li > a {
+    padding: 10px 10px;
 }
 .landing-page .navbar-scroll.navbar-default .nav li a:hover,
 .landing-page .navbar-scroll.navbar-default .nav li a:active,
@@ -272,7 +274,7 @@ vote-info, .vote-info a {
         margin-top: 50px;
     }
     .landing-page .site-content > section:nth-child(1) {
-        margin-top: 140px;
+        margin-top: 64px;
     }
 }
 @media (min-width:991px) {
@@ -280,7 +282,7 @@ vote-info, .vote-info a {
         margin-top: 0;
     }
     .landing-page .site-content > section:nth-child(1) {
-        margin-top: 70px;
+        margin-top: 64px;
     }
 }
 @media (max-width: 768px) {
@@ -294,7 +296,7 @@ vote-info, .vote-info a {
         flex-direction: row;
     }
     .landing-page .site-content > section:nth-child(1) {
-        margin-top: 60px;
+        margin-top: 57px;
     }
     .landing-page footer .nav > li > strong,
     .landing-page footer .nav > li > a,

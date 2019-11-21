@@ -36,7 +36,7 @@ const CustomNavbar = ({ pageInfo }) => {
                             {data.wagtail.navMenuItems.map((navMenuItem, index) => {
                                 return (
                                     <Nav.Link as="li" eventKey={"nav-link-" + index}>
-                                        <Link className="nav-link" to={navMenuItem.linkUrl}>
+                                        <Link className="nav-link text-center" to={navMenuItem.linkUrl}>
                                             {navMenuItem.name}
                                         </Link>
                                     </Nav.Link>

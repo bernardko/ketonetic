@@ -17,11 +17,7 @@ const Columns = ({ children, columnLayout }) => {
         return (
             <section className="features p-h-lg">
             <div className="container">
-                <div className="row">
-                    <div className="col-sm-12">            
-                    {children}
-                    </div>
-                </div>
+                {children}
             </div>
             </section>
         )

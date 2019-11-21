@@ -1,11 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap"
 import logo_ketonetic from "../img/logo_ketonetic.png"
 
 const CustomNavbar = ({ pageInfo }) => {
-  return (<StaticQuery
+    return (<StaticQuery
         query={graphql`
             query {
                 wagtail {
@@ -21,7 +21,37 @@ const CustomNavbar = ({ pageInfo }) => {
             }
         `}
         render={data => (
-            <div className="navbar-wrapper">
+            <Navbar className="navbar navbar-default navbar-fixed-top navbar-expand-md navbar-scroll" collapseOnSelect expand="lg">
+                <div className="container">
+                    <Link to="/">
+                        <Navbar.Brand as="span">
+                            <img src={logo_ketonetic} width="200" alt="Ketonetic Logo" />
+                        </Navbar.Brand>
+                    </Link>
+                    <div className="navbar-header">
+                        <Navbar.Toggle className="navbar-toggler" aria-controls="navbar" />
+                    </div>
+                    <Navbar.Collapse id="navbar">
+                        <Nav as="ul" className="nav">
+                            {data.wagtail.navMenuItems.map((navMenuItem, index) => {
+                                return (
+                                    <Nav.Link as="li" eventKey={"nav-link-" + index}>
+                                        <Link className="nav-link" to={navMenuItem.linkUrl}>
+                                            {navMenuItem.name}
+                                        </Link>
+                                    </Nav.Link>
+                                )
+                            })}
+                        </Nav>
+                    </Navbar.Collapse>
+                </div>
+            </Navbar>
+        )}
+    />)
+}
+
+/*
+<div className="navbar-wrapper">
                 <nav className="navbar navbar-default navbar-fixed-top navbar-expand-md navbar-scroll" role="navigation">
                     <div className="container">
                         <Link className="navbar-brand" to="/">
@@ -44,8 +74,6 @@ const CustomNavbar = ({ pageInfo }) => {
                     </div>
                 </nav>
             </div>
-        )}
-    />)
-}
+*/
 
 export default CustomNavbar

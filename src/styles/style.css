@@ -34,8 +34,17 @@ a {
     margin-bottom: 10px;
     border-bottom: 2px solid #e77362;
 }
-.landing-page .navbar-scroll.navbar-default .nav li a:hover {
+.landing-page .navbar-default.navbar-scroll {
+    background-color: #fff;
+    border-color: #fff;
+    padding: 0;
+    margin-top: -9px;
+}
+.landing-page .navbar-scroll.navbar-default .nav li a:hover,
+.landing-page .navbar-scroll.navbar-default .nav li a:active,
+.landing-page .navbar-default .navbar-nav > .active > a {
     color: #e77362;
+    border-top: 6px solid #fff;
 }
 .landing-page .navbar-default .navbar-brand:hover,
 .landing-page .navbar-default .navbar-brand:focus {

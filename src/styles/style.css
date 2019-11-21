@@ -243,6 +243,16 @@ vote-info, .vote-info a {
     font-size: 20px;
     font-weight: 600;
 }
+.landing-page .services {
+    padding-top: 0;
+}
+.landing-page .services h2 {
+    color:#e77362;
+    font-size: 25px;
+}
+.landing-page .services p {
+    font-size: 16px;
+}
 @media (min-width: 1000px) {
     .landing-page .wide-image {
         max-width: 90%;

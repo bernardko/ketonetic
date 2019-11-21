@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const HighlightTextBlock = ({blockData}) => (
     <section className={"theme-section " + blockData.value.section_classes} style={{marginBottom: 0, paddingTop:"80px", paddingBottom:"90px"}}>
@@ -13,7 +14,10 @@ const HighlightTextBlock = ({blockData}) => (
                     </h2>
                     <div class="testimonials-text">
                         <p>{blockData.value.text}</p>
-                        {blockData.value.button_url && blockData.value.button_text && (
+                        {blockData.value.button_url && blockData.value.button_text && blockData.value.button_url.startsWith("/") && (
+                            <Link to={blockData.value.button_url} class="btn btn-default btn-rounded">{blockData.value.button_text}</Link>
+                        )}
+                        {blockData.value.button_url && blockData.value.button_text && blockData.value.button_url.startsWith("http") && (
                             <a href={blockData.value.button_url} class="btn btn-default btn-rounded">{blockData.value.button_text}</a>
                         )}
                     </div>

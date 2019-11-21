@@ -8,6 +8,8 @@ import LineH2Block from "./blocks/lineH2Block"
 import TaggedH2Block from "./blocks/taggedH2Block"
 import RichTextBlock from "./blocks/richTextBlock"
 import SummaryBlock from "./blocks/summaryBlock"
+import RelatedLinksBlock from "./blocks/relatedLinksBlock"
+import ListingBlock from "./listingBlock"
 import Columns from "./columns"
 import H2Block from "./blocks/h2Block"
 
@@ -42,6 +44,10 @@ const ColumnBlock = ({blockData, columnLayout}) => (
                 case 'action_button':
                     return (
                         <ActionButtonBlock blockData={block} />
+                    )
+                case 'related_links':
+                    return (
+                        <RelatedLinksBlock blockData={block} pages={blockData.content[index].links} />
                     )
             }
         })}

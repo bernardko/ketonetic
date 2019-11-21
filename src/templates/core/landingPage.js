@@ -9,7 +9,7 @@ const LandingPage = ({data}) => {
   const page = data.wagtail.landingPages[0]
   return (
     <Layout pageInfo={{backgroundImage: false}}>
-      <SEO title={page.pageTitle} description={page.searchDescription} feedImage={page.feedImage} />
+      <SEO title={page.pageTitle} description={page.searchDescription} feedImage={page.searchImage} />
       <StreamBlock streamField={page.body} pageData={page} />
     </Layout>
   )

@@ -5,7 +5,7 @@ import ReactHtmlParser from "react-html-parser"
 
 const SummaryBlock = ({blockData}) => (
     <div class="row">
-        <div class={"col-lg-12 wow fadeInLeft summary-box " + blockData.value.section_classes}>
+        <div id={blockData.value.section_id} class={"col-lg-12 wow fadeInLeft summary-box " + blockData.value.section_classes}>
         {ReactHtmlParser(blockData.value.text)}
         </div>
     </div>

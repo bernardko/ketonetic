@@ -156,6 +156,33 @@ export const gatsbyFragments = graphql`
             credit
           }
         }
+        ... on Wagtail_RelatedLinksBlock {
+          blockType
+          value
+          links {
+            ... on Wagtail_RelatedLinkBlock {
+              blockType
+              value
+              page {
+                title
+                pageUrl
+                searchImage {
+                  id
+                  src
+                  imageFile {
+                    childImageSharp {
+                      fluid (maxWidth: 400) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
+                  credit
+                }
+              }
+            }
+          } 
+        }
       }
     }
   }
@@ -350,6 +377,33 @@ export const previewFragments = `
             alt
             credit
           }
+        }
+        ... on RelatedLinksBlock {
+          blockType
+          value
+          links {
+            ... on RelatedLinkBlock {
+              blockType
+              value
+              page {
+                title
+                pageUrl
+                searchImage {
+                  id
+                  src
+                  imageFile {
+                    childImageSharp {
+                      fluid (maxWidth: 400) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  alt
+                  credit
+                }
+              }
+            }
+          } 
         }
       }
     }

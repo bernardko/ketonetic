@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Columns from "../../components/columns/columns"
 import ListItemBlock from "./listItemBlock"
 
 class ListingBlock extends React.Component  {  
@@ -15,23 +14,29 @@ class ListingBlock extends React.Component  {
     }
 
     render() {
-        const { pages, columnLayout } = this.props;
+        const { pages } = this.props;
         const { currentLimit } = this.state
         return (
-            <Columns columnLayout={columnLayout}>
-                <div className="row">
-                    <div className="col-lg-12">
-                        {(pages || []).slice(0, currentLimit).map((page, index) => (
-                            <ListItemBlock page={page} />
-                        ))}
-                    </div>
-                    {(pages || []).length > currentLimit ? (
-                        <div className="col-lg-12">
-                            <a className="btn btn-primary btn-block m-t" onClick={this.loadMoreItems}>See more</a>
-                        </div>
-                    ) : null}
+            <div className="row">
+                <div className="col-lg-12">
+                    {(pages || []).slice(0, currentLimit).map((page, index) => {
+                        if (page.page ) {
+                            return (
+                                <ListItemBlock page={page.page} />
+                            )
+                        } else {
+                            return (
+                                <ListItemBlock page={page} />
+                            )
+                        }
+                    })}
                 </div>
-            </Columns>  
+                {(pages || []).length > currentLimit ? (
+                    <div className="col-lg-12">
+                        <a className="btn btn-primary btn-block m-t" onClick={this.loadMoreItems}>See more</a>
+                    </div>
+                ) : null}
+            </div>  
         )
     }
 }

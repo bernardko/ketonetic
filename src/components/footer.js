@@ -5,8 +5,12 @@ import React from "react"
 const Footer = () => (
     <footer className="mt-auto py-3 gray-section">
         <div className="container">
+            <div className="row m-xs p-w-xs">
+                <p>The information provided on ketonetic.com is not medical advice and should be used for educational purposes only.</p>
+            </div>
             <div className="row">
-                <ul class="nav nav-pills nav-footer">
+
+                <ul className="nav nav-pills nav-footer">
                     <li><strong>&copy; 2019 ketonetic.com</strong></li>
                     <li>
                         <Link to="/about/">About Us</Link>

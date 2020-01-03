@@ -26,7 +26,8 @@ a {
     width: 60px;
     height: 1px;
     border-bottom: 2px solid #e77362;
-    margin: 0 auto 0;
+    margin: 0 auto 0;7
+    margin-bottom: 30px;
 }
 .landing-page .navy-line-left {
     width: 60px;
@@ -70,7 +71,6 @@ a {
     font-size: 30px;
 }
 .landing-page h2 {
-    margin-top: 30px;
     margin-bottom: 30px;
     font-size: 30px;
 }

@@ -32,7 +32,7 @@ a {
 .landing-page .navy-line-left {
     width: 60px;
     height: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     border-bottom: 2px solid #e77362;
 }
 .landing-page .navbar-default.navbar-scroll {
@@ -66,7 +66,6 @@ a {
     font-size: 45px;
 }
 .landing-page .features h2 {
-    margin-top: 30px;
     margin-bottom: 30px;
     font-size: 30px;
 }

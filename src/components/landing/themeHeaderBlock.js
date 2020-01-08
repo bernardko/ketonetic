@@ -22,7 +22,7 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                     <p>{blockData.value.text}</p>
                 </div>
                 {pageData.author && (
-                    <div class="col-md-4 m-t-xs">    
+                    <div class="col-md-6 m-t-xs">    
                         <div className="social-feed-box b-r-md">
                             <div className="social-avatar">
                                 {pageData.author.image && (
@@ -39,9 +39,9 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                                          {pageData.author.fullName}
                                     </a>
                                     {pageData.firstPublishedAt != pageData.lastPublishedAt ? (
-                                        <small class="text-muted">first published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment> and updated on <Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></small>
+                                    <small class="text-muted">first published on <strong><Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></strong> and updated on <strong><Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></strong></small>
                                     ) : (
-                                        <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></small>
+                                        <small class="text-muted">published on <strong><Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></strong></small>
                                     )}
                                 </div>
                                 <div className="social-body">

@@ -22,7 +22,7 @@ const Header = ({ blockData, pageData }) => (
                 <p>{pageData.intro}</p>
             )}
             {pageData.author && (
-                <div className="col-sm-4">
+                <div className="col-sm-6">
                     <div className="social-feed-box no-borders">
                         <div className="social-avatar">
                             {pageData.author.image && (
@@ -39,9 +39,9 @@ const Header = ({ blockData, pageData }) => (
                                     {pageData.author.fullName}
                                 </a>
                                 {pageData.firstPublishedAt != pageData.lastPublishedAt ? (
-                                    <small class="text-muted">first published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment> and updated on <Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></small>
+                                    <small class="text-muted">first published on <strong><Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></strong> and updated on <strong><Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></strong></small>
                                 ) : (
-                                    <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></small>
+                                    <small class="text-muted">published on <strong><Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></strong></small>
                                 )}
                             </div>
                         </div>

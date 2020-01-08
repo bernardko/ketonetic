@@ -51,6 +51,7 @@ export const query = graphql`
                 landingPages {
                     title
                     pageTitle
+                    firstPublishedAt
                     lastPublishedAt
                     slug
                     specificPageType
@@ -102,6 +103,7 @@ export const previewQuery = `
             landingPages {
                 title
                 pageTitle
+                firstPublishedAt
                 lastPublishedAt
                 slug
                 specificPageType

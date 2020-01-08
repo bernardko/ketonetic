@@ -38,7 +38,7 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                                     <a href="/about/">
                                          {pageData.author.fullName}
                                     </a>
-                                    <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></small>
+                                    <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></small>
                                 </div>
                                 <div className="social-body">
                                     <p>{pageData.author.intro}</p>

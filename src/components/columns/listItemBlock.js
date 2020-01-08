@@ -22,7 +22,7 @@ const ListItemBlock = ({page}) => (
                 <div className="vote-info no-vote">
                     <i className="fa fa-clock-o"></i> <a href="#">
                         <Moment format="D MMMM YYYY">
-                            {page.lastPublishedAt}
+                            {page.firstPublishedAt}
                         </Moment>
                     </a>
                     {page.author && (

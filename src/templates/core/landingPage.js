@@ -27,6 +27,7 @@ export const query = graphql`
               linkUrl
             }
             intro
+            firstPublishedAt
             lastPublishedAt
             searchDescription
             searchImage {
@@ -61,6 +62,7 @@ export const previewQuery = `
           linkUrl
         }
         intro
+        firstPublishedAt
         lastPublishedAt
         searchDescription
         searchImage {

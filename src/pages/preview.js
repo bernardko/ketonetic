@@ -1,7 +1,6 @@
 import React from 'react'
 import qs from 'query-string'
 import { request } from 'graphql-request'
-import { graphql } from 'gatsby'
 import { previewFragments } from '../fragments'
 import LandingPage, {
     previewQuery as landingPageQuery
@@ -10,7 +9,7 @@ import LandingPage, {
     previewQuery as categoryPageQuery
   } from '../templates/core/categoryPage'
 
-const path = require(`path`)
+// const path = require(`path`)
 
 const previewMappings = {
     'core.landingpage': {

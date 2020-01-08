@@ -140,6 +140,7 @@ a {
 }
 .vote-info a, .vote-info span {
     font-size: 14px;
+    margin-right: 10px;
 }
 .landing-page section .related-links p {
     font-size: 16px;

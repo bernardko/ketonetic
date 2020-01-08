@@ -165,6 +165,8 @@ export const gatsbyFragments = graphql`
               value
               page {
                 title
+                firstPublishedAt
+                lastPublishedAt
                 pageUrl
                 searchImage {
                   id
@@ -387,6 +389,8 @@ export const previewFragments = `
               value
               page {
                 title
+                firstPublishedAt
+                lastPublishedAt
                 pageUrl
                 searchImage {
                   id

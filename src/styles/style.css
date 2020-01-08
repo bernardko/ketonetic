@@ -64,6 +64,7 @@ a {
 }
 .landing-page h1 {
     font-size: 45px;
+    font-weight: 600;
 }
 .landing-page .features h2 {
     margin-bottom: 30px;

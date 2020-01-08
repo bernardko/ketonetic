@@ -9,13 +9,13 @@ const ListItemBlock = ({page}) => (
     <div className="vote-item">
         <div className="row">
             {page.searchImage ? (
-                <div className="col-md-2">
+                <div className="col-md-3">
                     <div className="img-fluid rounded-circle" style={{margin:"0 auto"}}>
                         <Img alt={page.searchImage.alt} fluid={page.searchImage.imageFile.childImageSharp.fluid} />
                     </div>
                 </div>
             ) : null}
-            <div className={page.searchImage ? "col-md-10 related-links": "col-md-12 related-links"}>
+            <div className={page.searchImage ? "col-md-9 related-links": "col-md-12 related-links"}>
                 <Link className="vote-title no-vote" to={page.pageUrl}>
                     {page.title}
                 </Link>

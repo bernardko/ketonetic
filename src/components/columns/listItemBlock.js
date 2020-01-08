@@ -20,9 +20,9 @@ const ListItemBlock = ({page}) => (
                     {page.title}
                 </Link>
                 <div className="vote-info no-vote">
-                    <i className="fa fa-clock-o"></i> <a href="#">
+                    <i className="fa fa-clock-o"></i> <a>
                         <Moment format="D MMMM YYYY">
-                            {page.firstPublishedAt}
+                            {page.lastPublishedAt}
                         </Moment>
                     </a>
                     {page.author && (

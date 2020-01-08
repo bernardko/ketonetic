@@ -38,9 +38,10 @@ const ThemeHeaderBlock = ({blockData, pageData}) => (
                                     <a href="/about/">
                                          {pageData.author.fullName}
                                     </a>
-                                    <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></small>
-                                    {pageData.firstPublishedAt != pageData.lastPublishedAt && (
-                                        <small class="text-muted">updated on <Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></small>
+                                    {pageData.firstPublishedAt != pageData.lastPublishedAt ? (
+                                        <small class="text-muted">first published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment> and updated on <Moment format="D MMMM YYYY">{pageData.lastPublishedAt}</Moment></small>
+                                    ) : (
+                                        <small class="text-muted">published on <Moment format="D MMMM YYYY">{pageData.firstPublishedAt}</Moment></small>
                                     )}
                                 </div>
                                 <div className="social-body">

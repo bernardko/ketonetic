@@ -15,23 +15,23 @@ const ListItemBlock = ({page}) => (
                     </div>
                 </div>
             ) : null}
-            <div className={page.searchImage ? "col-md-10": "col-md-12"}>
+            <div className={page.searchImage ? "col-md-10 related-links": "col-md-12 related-links"}>
                 <Link className="vote-title no-vote" to={page.pageUrl}>
                     {page.title}
                 </Link>
-                <div className="vote-info no-vote">
-                    <i className="fa fa-clock-o"></i> <a>
+                <div className="vote-info no-vote" style={{marginBottom: "10px"}}>
+                    <i className="fa fa-clock-o"></i> <span>
                         <Moment format="D MMMM YYYY">
                             {page.lastPublishedAt}
                         </Moment>
-                    </a>
+                    </span>
                     {page.author && (
                         <>
                             <i className="fa fa-user"></i> <Link to="/about/">{page.author.fullName}</Link>
                         </>
                     )}
-                    
                 </div>
+                <p>{page.searchDescription}</p>
             </div>
         </div>
     </div>

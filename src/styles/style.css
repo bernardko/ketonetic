@@ -68,10 +68,12 @@ a {
 .landing-page .features h2 {
     margin-bottom: 30px;
     font-size: 30px;
+    font-weight: 600;
 }
 .landing-page h2 {
     margin-bottom: 30px;
     font-size: 30px;
+    font-weight: 600;
 }
 .landing-page h2.emphasis {
     font-weight: 600;
@@ -85,7 +87,7 @@ a {
 .landing-page h3 {
     margin-top: 25px;
     font-size: 23px;
-    font-weight: 100;
+    font-weight: 600;
 }
 .landing-page h3.emphasis {
     font-weight: 600;
@@ -135,8 +137,11 @@ a {
 .landing-page .pagination {
     margin-top: 25px;
 }
-vote-info, .vote-info a {
+.vote-info a, .vote-info span {
     font-size: 14px;
+}
+.landing-page section .related-links p {
+    font-size: 16px;
 }
 .landing-page .gray-section {
     margin: 0;

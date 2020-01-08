@@ -165,6 +165,8 @@ export const gatsbyFragments = graphql`
               value
               page {
                 title
+                searchDescription
+                firstPublishedAt
                 lastPublishedAt
                 pageUrl
                 searchImage {
@@ -388,6 +390,8 @@ export const previewFragments = `
               value
               page {
                 title
+                searchDescription
+                firstPublishedAt
                 lastPublishedAt
                 pageUrl
                 searchImage {

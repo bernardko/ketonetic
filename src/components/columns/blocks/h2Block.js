@@ -28,9 +28,9 @@ const H2Block = ({blockData}) => (
                 {(blockData.value.fa_icon||blockData.value.emoji) && (
                     <>
                     {blockData.value.emoji ? (
-                        <span className={blockData.value.fa_icon + " m-t-md m-r-xs"} style={{float:"left"}}>{blockData.value.emoji}</span>
+                        <span className={blockData.value.fa_icon + " m-t-md m-r-xs"} style={{marginTop: "2px", float:"left"}}>{blockData.value.emoji}</span>
                     ):(
-                        <i className={blockData.value.fa_icon + " m-t-md m-r-xs"} style={{float:"left"}}>{blockData.value.emoji}</i>
+                        <i className={blockData.value.fa_icon + " m-t-md m-r-xs"} style={{marginTop: "2px", float:"left"}}>{blockData.value.emoji}</i>
                     )}
                     </>
                 )}

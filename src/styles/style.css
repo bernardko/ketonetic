@@ -115,10 +115,6 @@ a {
 .no-vote {
     margin-left: 0px;
 }
-#header {
-    margin-top: 80px;
-    margin-bottom: 20px;
-}
 .landing-page .jumbotron p {
     color: #676a6c;
     font-size: 25px;
@@ -276,17 +272,17 @@ a {
     }
 }
 @media (min-width:768px) {
-    #header {
-        margin-top: 135px;
-    }
     .landing-page .site-content > div:nth-child(1) {
         margin-top: 50px;
     }
     .landing-page .site-content > section:nth-child(1) {
-        margin-top: 64px;
+        margin-top: 135px;
     }
 }
 @media (min-width:991px) {
+    #header {
+        margin-top: 80px;
+    }
     .landing-page .site-content > div:nth-child(1) {
         margin-top: 0;
     }
@@ -305,7 +301,7 @@ a {
         flex-direction: row;
     }
     .landing-page .site-content > section:nth-child(1) {
-        margin-top: 57px;
+        margin-top: 65px;
     }
     .landing-page footer .nav > li > strong,
     .landing-page footer .nav > li > a,

@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
             pageUrl
           }
           redirects {
-            oldPath,
+            oldPath
             link
           }
         }

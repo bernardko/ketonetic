@@ -22,7 +22,9 @@ module.exports = {
           repo: "ssh://bunz@charlotte:/mnt/data/crux/git/ketonetic.git", // your repo url
           path: "/srv/ketonetic",
           "post-deploy":
-            "npm install && pm2 reload ecosystem.config.js --env production && pm2 save"
+            "npm install && pm2 reload ecosystem.config.js --env production && pm2 save",
+          "post-setup":
+            "npm install && pm2 start ecosystem.config.js --env production && pm2 save && gatsby telemetry --disable"
         }
     }
 }

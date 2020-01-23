@@ -23,7 +23,7 @@
     "gatsby-source-graphql": "^2.1.30",
     "gatsby-transformer-sharp": "^2.3.9",
     "moment-timezone": "^0.5.27",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "pm2": "^4.2.3",
     "prop-types": "^15.7.2",
     "query-string": "^6.9.0",

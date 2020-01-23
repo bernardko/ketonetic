@@ -10,19 +10,19 @@ module.exports = {
           },
           env_production: {
               "PORT": 22000,
-              "NODE_ENV": "production",
+              "NODE_ENV": "production"
           }
         },
-        deploy: {
-            production: {
-              host: 'syn',
-              user: 'bunz',
-              ref: 'origin/production', // (use 'origin/master' for your master branch,
-              repo: "ssh://bunz@charlotte:/mnt/data/crux/git/ketonetic.git", // your repo url
-              path: "/srv/ketonetic",
-              "post-deploy":
-                "npm install && pm2 reload ecosystem.config.js --env production && pm2 save"
-            }
+    ],
+    deploy: {
+        production: {
+          host: 'syn',
+          user: 'bunz',
+          ref: 'origin/production', // (use 'origin/master' for your master branch,
+          repo: "ssh://bunz@charlotte:/mnt/data/crux/git/ketonetic.git", // your repo url
+          path: "/srv/ketonetic",
+          "post-deploy":
+            "npm install && pm2 reload ecosystem.config.js --env production && pm2 save"
         }
-    ]
+    }
 }

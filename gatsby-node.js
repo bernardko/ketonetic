@@ -70,7 +70,6 @@ exports.createPages = ({ graphql, actions }) => {
             redirectInBrowser: true,
             toPath: redirect.link
           })
-
         }
 
         result.data.wagtail.landingPages.forEach(processPages)

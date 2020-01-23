@@ -61,5 +61,11 @@ module.exports = {
         trackingId: "UA-115911234-2",
       },
     },
+    {
+      resolve: 'gatsby-plugin-express',
+      options: {
+        output: 'config/gatsby-express.json',
+      }
+    },
   ],
 }

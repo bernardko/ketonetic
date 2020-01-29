@@ -12,6 +12,7 @@ import RelatedLinksBlock from "./blocks/relatedLinksBlock"
 import ListingBlock from "./listingBlock"
 import Columns from "./columns"
 import H2Block from "./blocks/h2Block"
+import TableBlock from "./blocks/tableBlock"
 
 const ColumnBlock = ({blockData, columnLayout}) => (
     <Columns columnLayout={columnLayout}>
@@ -48,6 +49,10 @@ const ColumnBlock = ({blockData, columnLayout}) => (
                 case 'related_links':
                     return (
                         <RelatedLinksBlock blockData={block} pages={blockData.content[index].links} />
+                    )
+                case 'table':
+                    return (
+                        <TableBlock blockData={block} />
                     )
             }
         })}

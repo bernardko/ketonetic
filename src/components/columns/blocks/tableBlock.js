@@ -15,7 +15,7 @@ const tableBlock = ({blockData}) =>  {
     }
     return (
         <div class="row">
-             <div id={blockData.value.section_id} class={"col-lg-12 wow fadeInLeft table-box " + blockData.value.section_classes} style={{margin:"5px 0 5px 0"}}>
+             <div id={blockData.value.section_id} class={"col-lg-12 wow fadeInLeft table-box " + blockData.value.section_classes} style={{margin:"5px 0 10px 0"}}>
                 <Table className="table table-striped">
                     {tableHeader && (
                         <Thead>

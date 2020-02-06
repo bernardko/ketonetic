@@ -19,7 +19,7 @@ class ListingBlock extends React.Component  {
         return (
             <div className="row">
                 <div className="col-lg-12">
-                    {(pages || []).slice(0, currentLimit).map((page, index) => {
+                    {(pages || []).map((page, index) => {
                         if (page.page ) {
                             return (
                                 <ListItemBlock page={page.page} />
@@ -31,14 +31,20 @@ class ListingBlock extends React.Component  {
                         }
                     })}
                 </div>
+
+            </div>  
+        )
+    }
+}
+
+/*
+{(pages || []).slice(0, currentLimit).map((page, index) => {
+
                 {(pages || []).length > currentLimit ? (
                     <div className="col-lg-12">
                         <a className="btn btn-primary btn-block m-t" onClick={this.loadMoreItems}>See more</a>
                     </div>
                 ) : null}
-            </div>  
-        )
-    }
-}
+*/
 
 export default ListingBlock

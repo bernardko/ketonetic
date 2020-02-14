@@ -4,6 +4,8 @@ module.exports = {
           name: "ketonetic",
           script: "./app.js",
           watch: true,
+          instances  : 4,
+          exec_mode  : "cluster",
           increment_var : 'PORT',
           env: {
               "PORT": 8001,

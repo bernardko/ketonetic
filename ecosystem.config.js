@@ -4,6 +4,7 @@ module.exports = {
           name: "ketonetic",
           script: "./app.js",
           watch: true,
+          increment_var : 'PORT',
           env: {
               "PORT": 8001,
               "NODE_ENV": "development"

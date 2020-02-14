@@ -12,6 +12,9 @@ app.use(gatsyExpress('config/gatsby-express.json', {
   // should be used with gatsby-plugin-remove-trailing-slashes
   redirectSlashes: false,
 }));
+process.on('SIGINT', function() {
+  process.exit(1);
+});
 process.on('uncaughtException', function(e) {
   // console.log('An error has occured. error is: %s and stack trace is: %s', e, e.stack);
   // console.log("Process will restart now.");

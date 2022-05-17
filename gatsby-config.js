@@ -39,6 +39,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `e77362`,
         display: `minimal-ui`,
+        icon: "public/favicon-16x16.png",
       },
     },
     {
@@ -46,7 +47,7 @@ module.exports = {
       options: {
         typeName: "Wagtail",
         fieldName: 'wagtail',
-        url: process.env.GATSBY_WAGTAIL_ENDPOINT || 'http://artoria:8000/graphql/',
+        url: process.env.GATSBY_WAGTAIL_ENDPOINT || 'http://localhost:8002/graphql/',
         // refetchInterval: 10,
       },
     },

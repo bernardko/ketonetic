@@ -4,7 +4,7 @@ module.exports = {
           name: "ketonetic",
           script: "./app.js",
           watch: true,
-          instances  : 4,
+          instances  : "max",
           exec_mode  : "cluster",
           increment_var : 'PORT',
           env: {
@@ -19,15 +19,15 @@ module.exports = {
     ],
     deploy: {
         production: {
-          host: 'syn',
+          host: 'pricecray',
           user: 'bunz',
           ref: 'origin/production', // (use 'origin/master' for your master branch,
-          repo: "ssh://bunz@charlotte:/mnt/data/crux/git/ketonetic.git", // your repo url
+          repo: "git@github.com:bernardko/ketonetic.git", // your repo url
           path: "/srv/ketonetic",
           "post-deploy":
             "npm install && pm2 reload ecosystem.config.js --env production && pm2 save",
           "post-setup":
-            "npm install && pm2 start ecosystem.config.js -i 8 --env production && pm2 save"
+            "npm install && pm2 start ecosystem.config.js --env production && pm2 save"
         }
     }
 }

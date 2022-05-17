@@ -1,0 +1,513 @@
+{
+  "redirects": [
+    {
+      "fromPath": "/vegetables/potatoes",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-potatoes-keto/"
+    },
+    {
+      "fromPath": "/vegetables/potatoes/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-potatoes-keto/"
+    },
+    {
+      "fromPath": "/meat/chicken",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/chicken-nutrition-facts/"
+    },
+    {
+      "fromPath": "/meat/chicken/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/chicken-nutrition-facts/"
+    },
+    {
+      "fromPath": "/meat/salmon",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-salmon-keto/"
+    },
+    {
+      "fromPath": "/meat/salmon/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-salmon-keto/"
+    },
+    {
+      "fromPath": "/meat/turkey",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-turkey-keto/"
+    },
+    {
+      "fromPath": "/meat/turkey/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-turkey-keto/"
+    },
+    {
+      "fromPath": "/meat/pork",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-pork-keto/"
+    },
+    {
+      "fromPath": "/meat/pork/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-pork-keto/"
+    },
+    {
+      "fromPath": "/meat/lamb",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-lamb-keto/"
+    },
+    {
+      "fromPath": "/meat/lamb/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-lamb-keto/"
+    },
+    {
+      "fromPath": "/meat/beef",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-ground-beef-keto/"
+    },
+    {
+      "fromPath": "/meat/beef/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-ground-beef-keto/"
+    },
+    {
+      "fromPath": "/meat/tuna",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-tuna-keto/"
+    },
+    {
+      "fromPath": "/meat/tuna/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-tuna-keto/"
+    },
+    {
+      "fromPath": "/meat/beef-liver",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/"
+    },
+    {
+      "fromPath": "/meat/beef-liver/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/"
+    },
+    {
+      "fromPath": "/vegetables/bell-peppers",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-bell-peppers-keto/"
+    },
+    {
+      "fromPath": "/vegetables/bell-peppers/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-bell-peppers-keto/"
+    },
+    {
+      "fromPath": "/vegetables/spinach",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-spinach-keto/"
+    },
+    {
+      "fromPath": "/vegetables/spinach/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-spinach-keto/"
+    },
+    {
+      "fromPath": "/vegetables/asparagus",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-asparagus-keto/"
+    },
+    {
+      "fromPath": "/vegetables/asparagus/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-asparagus-keto/"
+    },
+    {
+      "fromPath": "/vegetables/mushrooms",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-mushroom-keto/"
+    },
+    {
+      "fromPath": "/vegetables/mushrooms/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-mushroom-keto/"
+    },
+    {
+      "fromPath": "/vegetables/onions",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/onion-on-keto/"
+    },
+    {
+      "fromPath": "/vegetables/onions/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/onion-on-keto/"
+    },
+    {
+      "fromPath": "/vegetables/cucumbers",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/cucumbers-on-keto/"
+    },
+    {
+      "fromPath": "/vegetables/cucumbers/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/cucumbers-on-keto/"
+    },
+    {
+      "fromPath": "/meat/bacon",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-bacon-keto/"
+    },
+    {
+      "fromPath": "/meat/bacon/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-bacon-keto/"
+    },
+    {
+      "fromPath": "/vegetables/carrots",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-carrots-keto/"
+    },
+    {
+      "fromPath": "/vegetables/carrots/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-carrots-keto/"
+    },
+    {
+      "fromPath": "/vegetables/broccoli",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-broccoli-keto/"
+    },
+    {
+      "fromPath": "/vegetables/broccoli/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/is-broccoli-keto/"
+    },
+    {
+      "fromPath": "/fats/coconut-oil",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/coconut-oil-for-keto/"
+    },
+    {
+      "fromPath": "/fats/coconut-oil/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/coconut-oil-for-keto/"
+    },
+    {
+      "fromPath": "/dairy/eggs",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-eggs-keto/"
+    },
+    {
+      "fromPath": "/dairy/eggs/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-eggs-keto/"
+    },
+    {
+      "fromPath": "/beverages/coffee",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/coffee-on-keto/"
+    },
+    {
+      "fromPath": "/beverages/coffee/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/coffee-on-keto/"
+    },
+    {
+      "fromPath": "/dairy",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/dairy-fats/"
+    },
+    {
+      "fromPath": "/dairy/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/dairy-fats/"
+    },
+    {
+      "fromPath": "/fats",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/dairy-fats/"
+    },
+    {
+      "fromPath": "/fats/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/dairy-fats/"
+    },
+    {
+      "fromPath": "/fruit/blueberries",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-blueberries-keto/"
+    },
+    {
+      "fromPath": "/fruit/blueberries/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-blueberries-keto/"
+    },
+    {
+      "fromPath": "/fruit/bananas",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-bananas-keto/"
+    },
+    {
+      "fromPath": "/fruit/bananas/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-bananas-keto/"
+    },
+    {
+      "fromPath": "/fruit/avocado",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-avocados-keto/"
+    },
+    {
+      "fromPath": "/fruit/avocado/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-avocados-keto/"
+    },
+    {
+      "fromPath": "/fruit/apples",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-apples-keto/"
+    },
+    {
+      "fromPath": "/fruit/apples/",
+      "isPermanent": true,
+      "ignoreCase": true,
+      "redirectInBrowser": true,
+      "toPath": "/are-apples-keto/"
+    }
+  ],
+  "pages": [
+    {
+      "path": "/about/"
+    },
+    {
+      "path": "/are-apples-keto/"
+    },
+    {
+      "path": "/are-avocados-keto/"
+    },
+    {
+      "path": "/are-bananas-keto/"
+    },
+    {
+      "path": "/are-bell-peppers-keto/"
+    },
+    {
+      "path": "/are-blueberries-keto/"
+    },
+    {
+      "path": "/are-carrots-keto/"
+    },
+    {
+      "path": "/are-eggs-keto/"
+    },
+    {
+      "path": "/are-mushroom-keto/"
+    },
+    {
+      "path": "/are-potatoes-keto/"
+    },
+    {
+      "path": "/are-sweet-potatoes-keto/"
+    },
+    {
+      "path": "/are-tomatoes-keto/"
+    },
+    {
+      "path": "/boost-mood-food-beef-liver/"
+    },
+    {
+      "path": "/carbs-in-sweet-potato-fries/"
+    },
+    {
+      "path": "/chicken-nutrition-facts/"
+    },
+    {
+      "path": "/coconut-oil-for-keto/"
+    },
+    {
+      "path": "/coffee-on-keto/"
+    },
+    {
+      "path": "/cucumbers-on-keto/"
+    },
+    {
+      "path": "/is-asparagus-keto/"
+    },
+    {
+      "path": "/is-bacon-keto/"
+    },
+    {
+      "path": "/is-broccoli-keto/"
+    },
+    {
+      "path": "/is-butter-keto/"
+    },
+    {
+      "path": "/is-ground-beef-keto/"
+    },
+    {
+      "path": "/is-half-and-half-keto/"
+    },
+    {
+      "path": "/is-lamb-keto/"
+    },
+    {
+      "path": "/is-milk-keto-friendly/"
+    },
+    {
+      "path": "/is-peanut-butter-keto/"
+    },
+    {
+      "path": "/is-pork-keto/"
+    },
+    {
+      "path": "/is-salmon-keto/"
+    },
+    {
+      "path": "/is-spinach-keto/"
+    },
+    {
+      "path": "/is-tuna-keto/"
+    },
+    {
+      "path": "/is-turkey-keto/"
+    },
+    {
+      "path": "/onion-on-keto/"
+    },
+    {
+      "path": "/privacy-policy/"
+    },
+    {
+      "path": "/"
+    },
+    {
+      "path": "/dairy-fats/"
+    },
+    {
+      "path": "/fruit/"
+    },
+    {
+      "path": "/meat/"
+    },
+    {
+      "path": "/beverages/"
+    },
+    {
+      "path": "/vegetables/"
+    },
+    {
+      "path": "/404/"
+    },
+    {
+      "path": "/404.html"
+    },
+    {
+      "path": "/preview/"
+    }
+  ]
+}

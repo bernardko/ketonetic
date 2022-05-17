@@ -43,7 +43,7 @@ class WagtailPreview extends React.Component {
                 try {
                     const wagtail = await request(
                         process.env.GATSBY_WAGTAIL_ENDPOINT ||
-                        'http://artoria:8000/graphql/',
+                        'http://localhost:8000/graphql/',
                         query,
                         { ...pageContext, previewToken: token }
                     )

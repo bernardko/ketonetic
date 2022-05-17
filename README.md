@@ -22,6 +22,10 @@ Build for production:
 npm run build
 ```
 
+
+## Deployment
+This project has been also setup to be deployed to a VPS using pm2 and express.
+
 Setup and Deployment using pm2:
 ```
 pm2 deploy production setup

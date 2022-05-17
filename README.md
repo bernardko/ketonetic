@@ -33,3 +33,8 @@ pm2 deploy production setup
 ```
 pm2 deploy production
 ```
+
+Deploy build to surge.sh:
+```
+surge public/
+```

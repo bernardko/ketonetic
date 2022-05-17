@@ -19,7 +19,7 @@ module.exports = {
     ],
     deploy: {
         production: {
-          host: 'pricecray',
+          host: 'ketonetic',
           user: 'bunz',
           ref: 'origin/production', // (use 'origin/master' for your master branch,
           repo: "git@github.com:bernardko/ketonetic.git", // your repo url

@@ -1,9 +1,9 @@
-# ketonetic.com - A Gatsby frontend static generated website
+# ketonetic.com - A GatsbyJS frontend static generated website
 
 This repository is an experiment on using Gatsby and GraphQL to generate a static website. It uses [headless-wagtail](https://github.com/bernardko/headless-wagtail) as the headless CMS to generate a static website.
 
 ## Requirements and Usage
-- Updated to use Gatsby 4 and NodeJS 16+
+- Updated to use GatsbyJS 4 and NodeJS 16+
 
 Clone the repository and install dependancies:
 ```
